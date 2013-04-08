@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Gruppe>
+	<Gruppenleiter>
+		<Vorname>Peter</Vorname>
+		<Nachname>Kraus</Nachname>
+		<email>kraus@mail.de</email>
+		<Geburtstag>20.09.1980</Geburtstag>
+		<Erfahrung>Amateur</Erfahrung>
+		<Schlagzeug>vorhanden</Schlagzeug>
+		<Anmerkungen>Keine</Anmerkungen>
+	</Gruppenleiter>
+
+	<Person>
+		<Vorname>Peter</Vorname>
+		<Nachname>Pan</Nachname>
+		<email>PeterPan@mail.de</email>
+		<Geburtstag>22.03.1900</Geburtstag>
+		<Erfahrung>Amateur</Erfahrung>
+		<Schlagzeug>nicht vorhanden</Schlagzeug>
+		<Anmerkungen>Keine</Anmerkungen>
+	</Person>
+	<AGB>ja</AGB>
+</Gruppe>

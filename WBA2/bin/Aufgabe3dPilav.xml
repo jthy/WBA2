@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rezept xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Aufgabe3d.xsd">
+  <Allgemeines>
+    <Rezeptname>Pilav</Rezeptname>
+    <Autor>Vlar</Autor>
+  </Allgemeines>
+    <Zutaten>
+    <Zutat>Reis</Zutat>
+    <Gewicht>4</Gewicht>
+    <Einheit>Gläser</Einheit>
+    
+    <Zutat>Nudeln (Vermicelles, Pasta da minestra)</Zutat>
+    <Gewicht>1</Gewicht>
+    <Einheit>Glas</Einheit>
+    
+     <Zutat>Wasser</Zutat>
+    <Gewicht>8</Gewicht>
+    <Einheit>Gläser</Einheit>
+    
+     <Zutat>Planzenöl</Zutat>
+    <Gewicht></Gewicht>
+    <Einheit></Einheit>
+    
+     <Zutat>Salz</Zutat>
+    <Gewicht></Gewicht>
+    <Einheit></Einheit>
+   
+  </Zutaten>
+  <Portionen>0</Portionen>
+  <Zubereitung>
+    <Arbeitszeit>00:10:00</Arbeitszeit>
+    <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
+    <Brennwert-p.P></Brennwert-p.P>
+    <Vorgänge>
+    Reis in einem feinen Sieb waschen und abtropfen lassen. 
+    In die Pfanne reichlich Pflanzenöl geben, so dass ein Spiegel aus Öl entsteht. 
+    Die Nudeln zufügen, goldgelb anbraten, den Reis zufügen und umrühren. 
+    Mit kaltem Wasser abschrecken und Salz hinzufügen. 
+    Bis zum Siedepunkt köcheln lassen, Herd ausmachen, 
+    Deckel darauf legen und ausquellen lassen. 
+	Tipp: Man kann in das Wasser noch Curry, Hühnerbrühe oder 
+	Rinderbrühe geben, je nachdem wozu man den Reis servieren will.
+	</Vorgänge>
+  </Zubereitung>
+  <Kommentieren Kommentar_hilfreich="ja">
+    <Name>küchenmungo</Name>
+    <Datum>2010-06-23</Datum>
+    <Zeit>14:46:00</Zeit>
+    <text>Hallo ince, 
+Dein Reisrezept hört sich gut an. Nimmst Du Langkorn- oder Rundkornreis? 
+Sind die Nudel nach dem garen noch zu erkennen? 
+Liebe Grüße Renate</text>
+  </Kommentieren>
+</Rezept>

@@ -1,0 +1,7 @@
+Kriterien:
+-Datei wird unter Namen gespeichert
+-Datei wird durch Titel,Autor,Information, Zutaten, Zubereitung und Kommentaren anderer Nutzer definiert
+-Restrictions: Portionen, Schwierigkeitsgrad, Kommentar hilfreich?, 
+-Komplex: Allgemeines, Zutaten, Zubereitung, Kommentare anderer Nutzer, Kommentar
+-Simpel: Restrictions, Titel, Autor, (Zutaten)-Typ, Gewicht, Einheit, Portionen, Schritte, Nummer, Vorgng, 
+		Kommentar(Name, Datum, Zeit, Text)

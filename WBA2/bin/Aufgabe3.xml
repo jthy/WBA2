@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rezept>
+<Allgemeines>
+	<Titel>Lenchen’s Schokoladenkuchen</Titel>
+	<Information>
+		<Bild>imgagesrc</Bild>
+		<button>Drucken</button>
+		<button>Speichern</button>
+		<button>Speichern unter</button>
+		<button>Empfehlen</button>
+		<button>Fotos hochladen</button>
+	</Information>
+</Allgemeines>
+<Zutaten>
+		<Typ>
+			<Gewicht>200</Gewicht>
+			<Einheit>g</Einheit>
+			<Name>Butter</Name>	
+		</Typ>
+		<Typ>
+			<Gewicht>200</Gewicht>
+			<Einheit>g</Einheit>
+			<Name>Zucker</Name>	
+		</Typ>
+		<Typ>
+			<Gewicht>200</Gewicht>
+			<Einheit>g</Einheit>
+			<Name>Schokolade, Blockschokoldade</Name>	
+		</Typ>
+		<Typ>
+			<Gewicht>120</Gewicht>
+			<Einheit>g</Einheit>
+			<Name>Mehl</Name>	
+		</Typ>
+		<Typ>
+			<Gewicht>1/2</Gewicht>
+			<Einheit>TL</Einheit>
+			<Name>Backpulver</Name>	
+		</Typ>
+		<Typ>
+			<Gewicht>1</Gewicht>
+			<Einheit>Pkt.</Einheit>
+			<Name>Vanillezucker</Name>	
+		</Typ>
+		<Typ>
+			<Gewicht>4</Gewicht>
+			<Einheit></Einheit>
+			<Name>Eier</Name>	
+		</Typ>
+		<Portionen>
+				<Zahl>16</Zahl>
+		</Portionen>
+		<button>Umrechnen</button>
+</Zutaten>
+
+
+<Zubereitung>	
+		<Arbeitszeit>ca. 1Std. /</Arbeitszeit>
+		<Schwierigkeitsgrad>normal /</Schwierigkeitsgrad>
+		<Brennwert>295 kcal</Brennwert>
+		<Schritte>
+			Butter und Schokolade im Wasserbad schmelzen. 
+			Eier trennen. Eiweiß steif schlagen. 
+			Eigelbe, Zucker und Vanillezucker verrühren. 
+			Geschmolzene Butter-Schokomasse hinzufügen und mischen. 
+			Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiße vorsichtig unterheben. 
+			In eine gut gefettete Form geben. 
+			Bei 180°Grad 40 – 50 Minuten backen.
+		</Schritte>		
+</Zubereitung>
+
+<KommentareandererNutzer>
+			<Name>swieselchen</Name>
+			<Datum>07.02.2002</Datum>
+			<Zeit>10:49 Uhr</Zeit>
+			<text>Habe Deinen Kuchen gestern gebacken (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvertüre, zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert. Ich übrigends auch, super Rezept.</text>	
+</KommentareandererNutzer>
+</Rezept>

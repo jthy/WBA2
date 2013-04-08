@@ -1,0 +1,12 @@
+{
+"Gruppe": [
+
+"Gruppenleiter":[{ "Vorname":"Peter","Nachname":"Kraus","email":"krau@mail.de",
+"Geburtstag":"20.09.1980","Erfahrung":"Amateur","Schlagzeug":"vorhanden","Anmerkungen":"Keine"}], 
+
+"Person":[{ "Vorname":"Peter","Nachname":"Pan","email":"PeterPan@mail.de",
+"Geburtstag":"22.03.1900", "Erfahrung":"Amateur", "Schlagzeug":"nicht vorhanden", "Anmerkungen":"Keine"}],
+
+{"AGB":"ja"}
+]
+}
