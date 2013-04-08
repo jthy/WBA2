@@ -1,0 +1,67 @@
+Phase 1:
+
+Aufgabe1 - Erklären Sie kurz die Begriffe Wohlgeformtheit, Validität und Namespaces im Bezug auf XML und XML-Schema.
+Namespace:
+Namen für Objekte werden in einer Art Baumstruktur angeordnet und über entsprechende Pfadnamen eindeutig angesprochen.
+
+Wohlgeformtheit:
+Wenn XML Dokument alle XML-Regeln einhält
+
+Validität:
+Das argumentative Gewicht einer Aussage, Untersuchung oder Theorie
+
+Aufgabe2 
+a) Erzeugen Sie ein XML-Dokument, dass die Daten des folgenden Formulars vollständig erfasst:
+
+Die Xml-Datei (Augabe20.xml) besteht aus einem Element "Gruppe" welches aus einem Gruppenleiter und einer oder mehreren anderen Personen besteht.
+Diese Mitglieder der Gruppe werden durch die selben Eigenschaften beschrieben werden. 
+Am Ende werden den AGB zugestimmt und die Gruppe ist vollständig.
+
+b) Erzeugen Sie ein JSON-Dokument, dass zu ihrem XML-Dokument äquivalent ist.
+Das Json-Dokument war schwiergiger zu erstellen. Jedoch lag dies nicht an JSON an sich, sondern an der eigentlichen Erstellung der Datei.
+Im jetzigen Zustand endet die Datei auf .xml, obwohl sie eigentlich auf .json enden sollte. Nach einigen Versuchen wurde die Aufgabe im JSON-Editor erstellt.
+
+Aufgabe3
+a)Entwickeln Sie ein XML-Dokument, in dem die Daten des Rezeptes abgebildet werden. Achten Sie darauf, dass das Dokument semantisch möglichst reichhaltig ist. 
+Bei dieser und den folgenden Aufgaben lassen sie bitte die Daten in der Marginalspalte auf der rechten Seite weg.
+
+Das XML-Dokuement besteht aus einem Root-Element "Rezept", welches die Elemente "Allgemeines", "Zutaten", "Zubereitung" und "KommentareandererNutzer" beinhaltet.
+Die verschiedenen Zutaten werden nacheinander aufgelistet und durch verschiedene Eigenschaften definiert(Gewicht, Einheit, Name). 
+Die einzelnen Schritte der Zubereitung werden durch ein Element aufgeschrieben und nicht, wie in einer früheren Version als einzelne Elemente.
+Dies erschien im Nachhinein unsinnig. Buttons werden nicht mit im XML-Dokument aufgelistet, da diese keine Information einlesen.
+Auch Bilder werden in der Datei nicht mit eingefügt.
+
+b) Betrachten Sie nun andere Rezepte auf der Webseite http://www.chefkoch.de. Beschreiben Sie welche Gemeinsamkeiten die Rezepte hinsichtlich ihrer Daten haben und worin Sie sich unterscheiden.
+
+Gemeinsamkeiten:
+Design(Aufbau, Buttons, Bilder-Slideshow, Schriftgröße, Farben), Möglichkeit zu Kommentieren
+Es gibt einen Titel, Zutatenangaben(Gewicht, Einheit und Name), Zubereitung(Arbeitszeit, Schwierigeitsgrad, Brennwert, Schritte)
+
+
+Unterschiede:
+Bilderinhalte, Texte, Zutaten, Anzahl der Kommentare, Anzahl der Schritte
+
+c) Arbeiten Sie die Kriterien heraus, die für die Entwicklung einer XML-Schema-Datei beachtet werden müssen. Die Schema-Datei soll die Struktur für eine XML-Datei definieren, in der mehrere unterschiedliche Rezepte gespeichert werden können. 
+Ziel ist es, dass das XML-Schema möglichst restriktiv ist, so dass in der XML-Datei möglichst semantisch sinnvolle Daten bezüglich der Rezepte gespeichert werden können. Ziehen Sie beim Aufstellen der Kriterien u.A. folgende Fragestellungen in Betracht:
+
+Welche Daten müssen in simple und welche in complex-types abgebildet werden?
+Für welche Daten ist die Abbildung in Attributen sinnvoller?
+Welche Datentypen müssen für die Elemente definiert werden?
+Welche Restriktionen müssen definiert werden?
+
+Kriterien:
+-Datei wird durch "Allgemeines", "Zutaten", "Portionen", "Zubereitung" und "Kommentieren" bestimmt
+-Restrictions: Portionen, Schwierigkeitsgrad, Kommentar hilfreich?, 
+-Komplex:Rezept(als Root-Element) Allgemeines, Zutaten, Zubereitung, Kommentieren
+-Simpel: Rezeptname, Autor, Zutat, Gewicht, Einheit, Restrictions(Portionen,Kommentar_hilfreich),Arbeitszeit, Schwierigkeitsgrad, Brennwert p.P, Vorgänge, Name beim Kommentieren, Datum beim Kommentieren, Zeit beim Kommentieren, Kommentare, Attribute (Kommentar_hilfreich)
+
+d) Erstellen Sie nun ein XML-Schema auf Basis ihrer zuvor definierten Kriterien. Generieren Sie nun auf Basis des Schemas eine XML-Datei und füllen Sie diese mit zwei unterschiedlichen und validen Datensätzen.
+Es werden die Daten für einen Schokoladenkuchen und Pilav eingefügt.
+
+Aufgabe4:
+
+a) Erzeugen Sie zunächst aus der Schema-Datei der vorherigen Aufgabe Java-Objekte
+
+Es werden Rezept.java und ObjectFactory.java generiert. Gleichzeitig werden die Daten auf github hochgeladen.
+
+
