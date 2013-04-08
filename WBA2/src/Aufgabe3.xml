@@ -2,14 +2,7 @@
 <Rezept>
 <Allgemeines>
 	<Titel>Lenchen’s Schokoladenkuchen</Titel>
-	<Information>
-		<Bild>imgagesrc</Bild>
-		<button>Drucken</button>
-		<button>Speichern</button>
-		<button>Speichern unter</button>
-		<button>Empfehlen</button>
-		<button>Fotos hochladen</button>
-	</Information>
+	<Autor>Lenchen</Autor>
 </Allgemeines>
 <Zutaten>
 		<Typ>
@@ -50,7 +43,6 @@
 		<Portionen>
 				<Zahl>16</Zahl>
 		</Portionen>
-		<button>Umrechnen</button>
 </Zutaten>
 
 
