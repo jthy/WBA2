@@ -24,7 +24,7 @@
 	</xs:element>
 	
 
-	<xs:element name="Portionen">
+	<xs:element name="Haufen">
 		<xs:simpleType>
  		   <xs:restriction base="xs:integer">
       			<xs:minInclusive value="0"/>
@@ -61,7 +61,7 @@
  						</xs:restriction>
 					</xs:simpleType>
 			</xs:attribute>
-		</xs:complexType>			
+		</xs:complexType>		
 	</xs:element>
 	
 </xs:sequence>
