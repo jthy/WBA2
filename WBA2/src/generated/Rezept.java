@@ -534,7 +534,7 @@ public class Rezept {
         @XmlElement(name = "Schwierigkeitsgrad", required = true)
         protected String schwierigkeitsgrad;
         @XmlElement(name = "Brennwert-p.P", required = true)
-        protected BigInteger brennwertPP;
+        protected int brennwertPP;
         @XmlElement(name = "Vorg\u00e4nge", required = true)
         protected String vorgänge;
 
@@ -594,20 +594,20 @@ public class Rezept {
          *     {@link BigInteger }
          *     
          */
-        public BigInteger getBrennwertPP() {
+        public int getBrennwertPP() {
             return brennwertPP;
         }
 
         /**
          * Legt den Wert der brennwertPP-Eigenschaft fest.
          * 
-         * @param value
+         * @param i
          *     allowed object is
          *     {@link BigInteger }
          *     
          */
-        public void setBrennwertPP(BigInteger value) {
-            this.brennwertPP = value;
+        public void setBrennwertPP(int i) {
+            this.brennwertPP = i;
         }
 
         /**
@@ -669,7 +669,7 @@ public class Rezept {
         @XmlElement(name = "Zutat", required = true)
         protected String zutat;
         @XmlElement(name = "Gewicht", required = true)
-        protected BigInteger gewicht;
+        protected double gewicht;
         @XmlElement(name = "Einheit", required = true)
         protected String einheit;
 
@@ -705,20 +705,20 @@ public class Rezept {
          *     {@link BigInteger }
          *     
          */
-        public BigInteger getGewicht() {
+        public double getGewicht() {
             return gewicht;
         }
 
         /**
          * Legt den Wert der gewicht-Eigenschaft fest.
          * 
-         * @param value
+         * @param d
          *     allowed object is
          *     {@link BigInteger }
          *     
          */
-        public void setGewicht(BigInteger value) {
-            this.gewicht = value;
+        public void setGewicht(double d) {
+            this.gewicht = d;
         }
 
         /**

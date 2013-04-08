@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Rezept xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Aufgabe3d.xsd">
   <Allgemeines>
-    <Titel>Lenchen's Schokoladenkuchen</Titel>
+    <Rezeptname>Lenchen's Schokoladenkuchen</Rezeptname>
     <Autor>schnuebi</Autor>
   </Allgemeines>
   <Zutaten>
@@ -9,7 +9,7 @@
     <Gewicht>200</Gewicht>
     <Einheit>g</Einheit>
     
-    <Zutat>Zucker</Zutat>
+     <Zutat>Zucker</Zutat>
     <Gewicht>200</Gewicht>
     <Einheit>g</Einheit>
     
