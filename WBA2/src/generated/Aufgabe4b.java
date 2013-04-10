@@ -22,7 +22,7 @@ import javax.xml.bind.Unmarshaller;
 
 public class Aufgabe4b {
 
-  private static final String REZEPT_XML = "WBA2/src/generated.xml";
+  private static final String REZEPT_XML = "./Aufgabe3d.xml";
 
   public static void main(String[] args) throws JAXBException, IOException {
 
