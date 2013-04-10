@@ -1,12 +1,13 @@
 package generated;
 
 import generated.Rezept.*;
-import generated.ObjectFactory;
+/*import generated.ObjectFactory;
+import generated.Chefkoch.*;
 
 import java.util.GregorianCalendar;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
+import javax.xml.datatype.XMLGregorianCalendar;*/
 
 import java.io.File;
 import java.io.FileReader;
@@ -21,7 +22,7 @@ import javax.xml.bind.Unmarshaller;
 
 public class Aufgabe4b {
 
-  private static final String REZEPT_XML = "WBA2/src/.xml";
+  private static final String REZEPT_XML = "WBA2/src/generated.xml";
 
   public static void main(String[] args) throws JAXBException, IOException {
 
@@ -70,7 +71,7 @@ public class Aufgabe4b {
     
     //Zubereitungsangaben einlesen
     Zubereitung Zubereitung1= new Zubereitung();
-    Zubereitung1.setArbeitszeit(01:00:00);
+    //Zubereitung1.setArbeitszeit(01:00:00);
     Zubereitung1.setSchwierigkeitsgrad("normal");
     Zubereitung1.setBrennwertPP(295);
     Zubereitung1.setVorgänge("Butter und Schokolade im Wasserbad schmelzen. Eier trennen. Eiweiß steif schlagen. Eigelbe, Zucker und Vanillezucker verrühren. Geschmolzene Butter-Schokomasse hinzufügen und mischen. Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiße vorsichtig unterheben. In eine gut gefettete Form geben. Bei 180°Grad 40 – 50 Minuten backen.");
@@ -78,8 +79,8 @@ public class Aufgabe4b {
     //Kommentare einlesen
     Kommentieren Kommentieren1= new Kommentieren();
     Kommentieren1.setName("swieselchen");
-    Kommentieren1.setDatum(2002-02-07);
-    Kommentieren1.setZeit(18:49:00);
+    //Kommentieren1.setDatum(value)
+    //Kommentieren1.setZeit(18:49:00);
     Kommentieren1.setKommentare("Habe Deinen Kuchen gestern gebacken (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvertüre, zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert. Ich übrigends auch, super Rezept.");
     Kommentieren1.setKommentarHilfreich("ja");
     
@@ -100,6 +101,7 @@ public class Aufgabe4b {
     
     //Rezept in Liste aller Rezepte hinzufügen
     RezeptList.add(Rezept1);
+    
 
     //JAXB-Kontent erstellen und Marshaller initialisieren
     JAXBContext context = JAXBContext.newInstance(Rezept.class);
@@ -114,12 +116,13 @@ public class Aufgabe4b {
 
     // get variables from our xml file, created before
     System.out.println();
-    System.out.println("Output from our XML File: ");
-    Unmarshaller um = context.createUnmarshaller();
-    Rezept Rezept2 = (Rezept) um.unmarshal(new FileReader(REZEPT_XML));
-    ArrayList<Rezept> list = Rezept2.getAllgemeines();
+    System.out.println("Ausgabe der XML-Datei: ");
+    Unmarshaller um= context.createUnmarshaller();
+    Chefkoch Rezept2= (Chefkoch) um.unmarshal(new FileReader(REZEPT_XML));
+    ArrayList<Rezept> list = Rezept2.getRezept();
     for (Rezept rezept : list) {
       System.out.println("Rezept: ");
+      System.out.println("Rezept: " + rezept.getAllgemeines());
     }
   }
 } 

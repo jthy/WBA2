@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="Chefkoch">
+<xs:complexType>
+<xs:sequence>
 <xs:element name="Rezept">
 <xs:complexType>
 <xs:sequence>
-
 	<xs:element name="Allgemeines">
 		<xs:complexType>
 			<xs:sequence>
@@ -64,6 +66,9 @@
 		</xs:complexType>			
 	</xs:element>
 	
+</xs:sequence>
+</xs:complexType>
+</xs:element>
 </xs:sequence>
 </xs:complexType>
 </xs:element>

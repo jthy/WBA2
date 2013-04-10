@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.6 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // €nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2013.04.08 um 12:42:09 PM CEST 
+// Generiert: 2013.04.09 um 12:00:32 PM CEST 
 //
 
 
@@ -37,43 +37,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Rezept }
+     * Create an instance of {@link Chefkoch }
      * 
      */
-    public Rezept createRezept() {
-        return new Rezept();
+    public Chefkoch createChefkoch() {
+        return new Chefkoch();
     }
 
     /**
-     * Create an instance of {@link Rezept.Allgemeines }
+     * Create an instance of {@link Chefkoch.Rezept }
      * 
      */
-    public Rezept.Allgemeines createRezeptAllgemeines() {
-        return new Rezept.Allgemeines();
+    public Chefkoch.Rezept createChefkochRezept() {
+        return new Chefkoch.Rezept();
     }
 
     /**
-     * Create an instance of {@link Rezept.Zutaten }
+     * Create an instance of {@link Chefkoch.Rezept.Allgemeines }
      * 
      */
-    public Rezept.Zutaten createRezeptZutaten() {
-        return new Rezept.Zutaten();
+    public Chefkoch.Rezept.Allgemeines createChefkochRezeptAllgemeines() {
+        return new Chefkoch.Rezept.Allgemeines();
     }
 
     /**
-     * Create an instance of {@link Rezept.Zubereitung }
+     * Create an instance of {@link Chefkoch.Rezept.Zutaten }
      * 
      */
-    public Rezept.Zubereitung createRezeptZubereitung() {
-        return new Rezept.Zubereitung();
+    public Chefkoch.Rezept.Zutaten createChefkochRezeptZutaten() {
+        return new Chefkoch.Rezept.Zutaten();
     }
 
     /**
-     * Create an instance of {@link Rezept.Kommentieren }
+     * Create an instance of {@link Chefkoch.Rezept.Zubereitung }
      * 
      */
-    public Rezept.Kommentieren createRezeptKommentieren() {
-        return new Rezept.Kommentieren();
+    public Chefkoch.Rezept.Zubereitung createChefkochRezeptZubereitung() {
+        return new Chefkoch.Rezept.Zubereitung();
+    }
+
+    /**
+     * Create an instance of {@link Chefkoch.Rezept.Kommentieren }
+     * 
+     */
+    public Chefkoch.Rezept.Kommentieren createChefkochRezeptKommentieren() {
+        return new Chefkoch.Rezept.Kommentieren();
     }
 
 }
