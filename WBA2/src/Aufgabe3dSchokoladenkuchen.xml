@@ -39,13 +39,22 @@
     <Arbeitszeit>01:00:00</Arbeitszeit>
     <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
     <Brennwert-p.P>295</Brennwert-p.P>
-    <Vorgänge>Butter und Schokolade im Wasserbad schmelzen. Eier trennen. Eiweiß steif schlagen. Eigelbe, Zucker und Vanillezucker verrühren. Geschmolzene Butter-Schokomasse hinzufügen und mischen. Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiße vorsichtig unterheben. In eine gut gefettete Form geben. 
-Bei 180°Grad 40 – 50 Minuten backen.</Vorgänge>
+    <Vorgänge>
+    Butter und Schokolade im Wasserbad schmelzen. 
+    Eier trennen. Eiweiß steif schlagen. 
+    Eigelbe, Zucker und Vanillezucker verrühren. 
+    Geschmolzene Butter-Schokomasse hinzufügen und mischen. 
+    Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiße vorsichtig unterheben. 
+    In eine gut gefettete Form geben. 
+	Bei 180°Grad 40 – 50 Minuten backen.</Vorgänge>
   </Zubereitung>
   <Kommentieren Kommentar_hilfreich="ja">
     <Name>swieselchen</Name>
     <Datum>2002-02-07</Datum>
     <Zeit>18:49:00</Zeit>
-    <text>Habe Deinen Kuchen gestern gebacken (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvertüre, zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert. Ich übrigends auch, super Rezept.</text>
+    <Kommentare>Habe Deinen Kuchen gestern gebacken 
+    (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvertüre, 
+    zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert. 
+    Ich übrigends auch, super Rezept.</Kommentare>
     </Kommentieren>
 </Rezept>
