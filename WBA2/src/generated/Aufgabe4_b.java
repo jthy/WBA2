@@ -70,10 +70,10 @@ public class Aufgabe4_b {
 
     // Write to System.out
     m.marshal(rezept1, System.out);
- 
+   
 
     // Write to File
-//    m.marshal(rezept1, new FileOutputStream("src/ausgabe.xml"));
+     m.marshal(rezept1, new File("src/ausgaben.xml"));
     
     Writer w = null; 
     try { 
@@ -88,9 +88,9 @@ public class Aufgabe4_b {
     System.out.println();
     System.out.println("Ausgabe der XML-Datei: ");
     Unmarshaller um = context.createUnmarshaller();
-    Rezept r = (Rezept) um.unmarshal(new FileInputStream("src/Aufgabe3dSchokoladenkuchen.xml"));
-    //ArrayList<Rezept> list = r.get();
-    //for (Rezept rezepttest : list) {
+    Rezept r = (Rezept) um.unmarshal(new File("src/Aufgabe3dSchokoladenkuchen.xml"));
+   // ArrayList<Rezept> list = r.get();
+//    for (Rezept rezepttest : list) {
         System.out.println("Rezept: ");
 		System.out.println("\nAllgemeines\nRezeptname: " + r.getAllgemeines() .getRezeptname() 
 				+     	   "\nAutor: " + r.getAllgemeines() .getAutor()
@@ -128,14 +128,6 @@ public class Aufgabe4_b {
 		    //System.out.print("Kommentar hilfreich?: ");
 		    //kommentarneu.kommentarHilfreich = scanner.nextLine();
 		    System.out.print("Danke für Deinen Kommentar!");
-		    
-		 /* //neuer Kommentar
-		    Kommentieren kommentarneu= new Kommentieren();
-		    kommentarneu.setName("Julia");
-		    //kommentarneu.setDatum(2010-04-24);
-		    //kommentarneu.setZeit(18:49:00);
-		    kommentarneu.setKommentare("Hallo");
-		    kommentarneu.setKommentarHilfreich("nein");
-*/
+		
   }
 }
