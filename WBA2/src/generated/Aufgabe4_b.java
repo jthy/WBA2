@@ -21,7 +21,7 @@ import javax.xml.bind.Unmarshaller;
 
 public class Aufgabe4_b {
 
-  private static final String REZEPT_XML = "src/Aufgabe3dSchokoladenkuchen.xml";
+  private static final String REZEPT_XML = "./Aufgabe3dSchokoladenkuchen.xml";
 
   public static void main(String[] args) throws JAXBException, IOException {
 
