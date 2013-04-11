@@ -11,6 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -20,7 +21,7 @@ import javax.xml.bind.Unmarshaller;
 
 public class Aufgabe4_b {
 
- // private static final String REZEPT_XML = "src/Aufgabe3dSchokoladenkuchen.xml";
+  private static final String REZEPT_XML = "src/Aufgabe3dSchokoladenkuchen.xml";
 
   public static void main(String[] args) throws JAXBException, IOException {
 
@@ -45,7 +46,6 @@ public class Aufgabe4_b {
     zutat1.getZutat();
     zutat1.getGewicht();
     zutat1.getEinheit();
- 
     
     //Zubereitung festlegen 
     Zubereitung zubereitung1 = new Zubereitung();
@@ -62,13 +62,14 @@ public class Aufgabe4_b {
     kommentar1.getKommentare();
     kommentar1.getKommentarHilfreich();
     
+    //neuer Kommentar
     Kommentieren kommentarneu= new Kommentieren();
     kommentarneu.setName("Julia");
     //kommentarneu.setDatum(2010-04-24);
     //kommentarneu.setZeit(18:49:00);
     kommentarneu.setKommentare("Hallo");
     kommentarneu.setKommentarHilfreich("nein");
-    
+   
 
    // create JAXB context and instantiate marshaller
     JAXBContext context = JAXBContext.newInstance(Rezept.class);
@@ -77,9 +78,10 @@ public class Aufgabe4_b {
 
     // Write to System.out
     m.marshal(rezept1, System.out);
+ 
 
     // Write to File
-    //m.marshal(rezept1, new FileOutputStream("src/ausgabe.xml"));
+//    m.marshal(rezept1, new FileOutputStream("src/ausgabe.xml"));
     
     Writer w = null; 
     try { 
@@ -117,7 +119,20 @@ public class Aufgabe4_b {
 				+			"\n Zeit:" +kommentarneu.getZeit()
 				+			"\n Datum:" +kommentarneu.getDatum()
 				+			"\n Kommentar:" +kommentarneu.getKommentare()
-				+			"\n Kommentar hilfreich?:" +kommentarneu.getKommentarHilfreich());		
+				+			"\n Kommentar hilfreich?:" +kommentarneu.getKommentarHilfreich());	
+		 
+		Scanner scanner = new Scanner(System.in);
+		    System.out.print("Name: ");
+		    kommentarneu.name = scanner.nextLine();
+		    //System.out.print("Zeit: ");
+		    //kommentarneu.zeit = scanner.next();
+		    //System.out.print("Datum: ");
+		    //kommentarneu.datum = scanner.nextLine();
+		    System.out.print("Kommentar: ");
+		    kommentarneu.kommentare = scanner.nextLine();
+		    //System.out.print("Kommentar hilfreich?: ");
+		    //kommentarneu.kommentarHilfreich = scanner.nextLine();
+		    
 
   }
 }
