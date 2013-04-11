@@ -1,8 +1,7 @@
 package generated;
 
-import generated.ObjectFactory;
-import generated.Chefkoch.*;
-import generated.Rezept.*;
+import generated.Chefkoch.Rezept.*;
+import generated.Rezept;
 
 
 import java.io.File;
@@ -21,7 +20,7 @@ import javax.xml.bind.Unmarshaller;
 
 public class Aufgabe4_b {
 
-  private static final String REZEPT_XML = "src/Aufgabe3dSchokoladenkuchen.xml";
+ // private static final String REZEPT_XML = "src/Aufgabe3dSchokoladenkuchen.xml";
 
   public static void main(String[] args) throws JAXBException, IOException {
 
@@ -46,7 +45,7 @@ public class Aufgabe4_b {
     zutat1.getZutat();
     zutat1.getGewicht();
     zutat1.getEinheit();
-    
+ 
     
     //Zubereitung festlegen 
     Zubereitung zubereitung1 = new Zubereitung();
@@ -62,6 +61,13 @@ public class Aufgabe4_b {
     kommentar1.getZeit();
     kommentar1.getKommentare();
     kommentar1.getKommentarHilfreich();
+    
+    Kommentieren kommentarneu= new Kommentieren();
+    kommentarneu.setName("Julia");
+    //kommentarneu.setDatum(2010-04-24);
+    //kommentarneu.setZeit(18:49:00);
+    kommentarneu.setKommentare("Hallo");
+    kommentarneu.setKommentarHilfreich("nein");
     
 
    // create JAXB context and instantiate marshaller
@@ -92,20 +98,26 @@ public class Aufgabe4_b {
     //ArrayList<Rezept> list = r.get();
     //for (Rezept rezepttest : list) {
         System.out.println("Rezept: ");
-		System.out.println("Allgemeines:\nRezept: " + r.getAllgemeines() .getRezeptname() 
+		System.out.println("\nAllgemeines\nRezeptname: " + r.getAllgemeines() .getRezeptname() 
 				+     	   "\nAutor: " + r.getAllgemeines() .getAutor()
-        		+ 		   "\nZutaten: "+ r.getZutaten() .getZutat() + r.getZutaten() .getGewicht() + r.getZutaten() .getEinheit()
-				+		   "\nZubereitung:\nArbeitszeit:" + r.getZubereitung() .getArbeitszeit() 
+        		+ 		   "\nZutaten: "+ r.getZutaten() .getGewicht()+ r.getZutaten() .getEinheit()+ r.getZutaten() .getZutat()  
+				+		   "\n\nZubereitung\nArbeitszeit:" + r.getZubereitung() .getArbeitszeit() 
 				+          "\nSchwierigkeitsgrad:" +  r.getZubereitung() .getSchwierigkeitsgrad() 
 				+          "\nBrennwert:" + r.getZubereitung() .getBrennwertPP() 
 				+          "\nVorgänge:"  + r.getZubereitung() .getVorgänge()
 				+          "\nPortionen:" + r.getPortionen()
-				+		   "\nKommentare:\nKommentieren" + r.getKommentieren() .getName() 
+				+		   "\n\nKommentare\nName: " + r.getKommentieren() .getName() 
 				+          "\nZeit:" +r.getKommentieren() .getZeit() 
 				+ 		   "\nDatum:" + r.getKommentieren() .getDatum() 
 				+          "\nKommentar:" + r.getKommentieren() .getKommentare() 
 				+		   "\nKommentar hilfreich?:"+ r.getKommentieren() .getKommentarHilfreich()
 				);
+		
+		System.out.println("\nneuer Kommentar \n Name:" + kommentarneu.getName()
+				+			"\n Zeit:" +kommentarneu.getZeit()
+				+			"\n Datum:" +kommentarneu.getDatum()
+				+			"\n Kommentar:" +kommentarneu.getKommentare()
+				+			"\n Kommentar hilfreich?:" +kommentarneu.getKommentarHilfreich());		
 
   }
 }

@@ -94,6 +94,11 @@ Caused by: org.xml.sax.SAXParseException: Element type "Vorg" must be followed b
 	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal0(UnmarshallerImpl.java:218)
 	... 4 more
 
+Es stellt sich heraus, dass die Aufgabe zunächst falsch gelöst wurde, da eine neue XML-Datei erstellt und eingelesen wurde statt, wie in der Aufgabe
+gefordert, aus der bestehenden XML Daten herauszulesen.
+Die Datei wird angepasst und zum Teil neugeschrieben.
+Die Daten werden nun statt mit der set-Methode mit der get-Methode eingelesen.
+
 Aufgabe5 - Diskutieren Sie, warum es sinnvoll ist Daten in Formaten wie XML oder JSON zu speichern. 
 Stellen Sie außerdem die beiden Formate gegenüber und erläutern Sie kurz deren Vor- und Nachteile.
 
