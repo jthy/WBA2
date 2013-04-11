@@ -62,14 +62,6 @@ public class Aufgabe4_b {
     kommentar1.getKommentare();
     kommentar1.getKommentarHilfreich();
     
-    //neuer Kommentar
-    Kommentieren kommentarneu= new Kommentieren();
-    kommentarneu.setName("Julia");
-    //kommentarneu.setDatum(2010-04-24);
-    //kommentarneu.setZeit(18:49:00);
-    kommentarneu.setKommentare("Hallo");
-    kommentarneu.setKommentarHilfreich("nein");
-   
 
    // create JAXB context and instantiate marshaller
     JAXBContext context = JAXBContext.newInstance(Rezept.class);
@@ -115,13 +107,16 @@ public class Aufgabe4_b {
 				+		   "\nKommentar hilfreich?:"+ r.getKommentieren() .getKommentarHilfreich()
 				);
 		
-		System.out.println("\nneuer Kommentar \n Name:" + kommentarneu.getName()
+		/*System.out.println("\nneuer Kommentar \n Name:" + kommentarneu.getName()
 				+			"\n Zeit:" +kommentarneu.getZeit()
 				+			"\n Datum:" +kommentarneu.getDatum()
 				+			"\n Kommentar:" +kommentarneu.getKommentare()
-				+			"\n Kommentar hilfreich?:" +kommentarneu.getKommentarHilfreich());	
+				+			"\n Kommentar hilfreich?:" +kommentarneu.getKommentarHilfreich());	*/
+	
 		 
 		Scanner scanner = new Scanner(System.in);
+		
+		 Kommentieren kommentarneu= new Kommentieren();
 		    System.out.print("Name: ");
 		    kommentarneu.name = scanner.nextLine();
 		    //System.out.print("Zeit: ");
@@ -132,7 +127,15 @@ public class Aufgabe4_b {
 		    kommentarneu.kommentare = scanner.nextLine();
 		    //System.out.print("Kommentar hilfreich?: ");
 		    //kommentarneu.kommentarHilfreich = scanner.nextLine();
+		    System.out.print("Danke für Deinen Kommentar!");
 		    
-
+		 /* //neuer Kommentar
+		    Kommentieren kommentarneu= new Kommentieren();
+		    kommentarneu.setName("Julia");
+		    //kommentarneu.setDatum(2010-04-24);
+		    //kommentarneu.setZeit(18:49:00);
+		    kommentarneu.setKommentare("Hallo");
+		    kommentarneu.setKommentarHilfreich("nein");
+*/
   }
 }
