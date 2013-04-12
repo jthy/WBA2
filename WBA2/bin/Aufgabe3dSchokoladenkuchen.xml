@@ -1,99 +1,94 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Rezepte xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Aufgabe3d.xsd">
-  <Rezept>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Rezepte>
+    <Rezept>
         <Rezeptname>Lenchen's Schokoladenkuchen</Rezeptname>
         <Autor>schnuebi</Autor>
-    <Zutaten>
-      <Zutat Einheit="g">
-        <Name>Mehl</Name>
-        <Menge>400</Menge>
-      </Zutat>
-      <Zutat Einheit="Stk.">
-        <Name>Ei(er)</Name>
-        <Menge>4</Menge>
-      </Zutat>
-      <Zutat Einheit="Prise">
-        <Name>Salz</Name>
-        <Menge>2</Menge>
-      </Zutat>
-      <Zutat Einheit="g">
-        <Name>Zucker</Name>
-        <Menge>200</Menge>
-      </Zutat>
-    </Zutaten>
-    <Portionen>16</Portionen>
-    <Zubereitung>
-        <Arbeitszeit Einheit="std">
-        	<Dauer>1</Dauer>
-     	</Arbeitszeit>
-        <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
-        <Brennwert-p.P>295</Brennwert-p.P>
-        <VorgÃ¤nge>
+        <Zutaten>
+            <Zutat Einheit="g">
+                <Name>Mehl</Name>
+                <Menge>400.0</Menge>
+            </Zutat>
+            <Zutat Einheit="Stk.">
+                <Name>Ei(er)</Name>
+                <Menge>4.0</Menge>
+            </Zutat>
+            <Zutat Einheit="Prise">
+                <Name>Salz</Name>
+                <Menge>2.0</Menge>
+            </Zutat>
+            <Zutat Einheit="g">
+                <Name>Zucker</Name>
+                <Menge>200.0</Menge>
+            </Zutat>
+        </Zutaten>
+        <Portionen>16</Portionen>
+        <Zubereitung>
+            <Arbeitszeit Einheit="std">
+                <Dauer>1</Dauer>
+            </Arbeitszeit>
+            <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
+            <Brennwert-p.P>295</Brennwert-p.P>
+            <VorgŠnge>
     Butter und Schokolade im Wasserbad schmelzen. 
-    Eier trennen. Eiweiï¿½ steif schlagen. 
-    Eigelbe, Zucker und Vanillezucker verrï¿½hren. 
-    Geschmolzene Butter-Schokomasse hinzufï¿½gen und mischen. 
-    Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiï¿½e vorsichtig unterheben. 
+    Eier trennen. Eiwei? steif schlagen. 
+    Eigelbe, Zucker und Vanillezucker verr?hren. 
+    Geschmolzene Butter-Schokomasse hinzuf?gen und mischen. 
+    Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiwei?e vorsichtig unterheben. 
     In eine gut gefettete Form geben. 
-	Bei 180ï¿½Grad 40 ï¿½ 50 Minuten backen.</VorgÃ¤nge>
-    </Zubereitung>
-     <Kommentieren>
-      <Kommentar Datum="2001-01-01" Kommentare="Habe Deinen Kuchen gestern gebacken 
-    (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvertï¿½re, 
-    zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert. 
-    Ich ï¿½brigends auch, super Rezept." Name="swieselchen" Zeit="12:00:00"/>
-    </Kommentieren>
-</Rezept>
-<Rezept>
-    <Rezeptname>Pilav</Rezeptname>
-    <Autor>Vlar</Autor>
-   <Zutaten>
-   	  <Zutat Einheit="g">
-        <Name>Reis</Name>
-        <Menge>200</Menge>
-      </Zutat>
-     <Zutat Einheit="g">
-        <Name>Nudeln</Name>
-        <Menge>250</Menge>
-      </Zutat>
-  	<Zutat Einheit="ml">
-        <Name>Wasser</Name>
-        <Menge>100</Menge>
-      </Zutat>
-      <Zutat Einheit="EL">
-        <Name>PlanzenÃ¶l</Name>
-        <Menge>2</Menge>
-      </Zutat>
-    <Zutat Einheit="Prise">
-        <Name>Salz</Name>
-        <Menge>1</Menge>
-      </Zutat>
-  </Zutaten>
-  <Portionen>0</Portionen>
-  <Zubereitung>
-    <Arbeitszeit Einheit="std">
-        <Dauer>1</Dauer>
-      </Arbeitszeit>
-    <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
-    <Brennwert-p.P>275</Brennwert-p.P>
-    <VorgÃ¤nge>
+	Bei 180?Grad 40 ? 50 Minuten backen.</VorgŠnge>
+        </Zubereitung>
+        <Kommentieren>
+            <Kommentar Name="swieselchen" Datum="2001-01-01" Zeit="12:00:00" Kommentare="Habe Deinen Kuchen gestern gebacken      (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvert?re,      zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert.      Ich ?brigends auch, super Rezept."/>
+            <Kommentar Name="Julia" Kommentare="Echt ein super Rezept"/>
+            <Kommentar Name="Piet" Kommentare="unfassbar lecker!"/>
+        </Kommentieren>
+    </Rezept>
+    <Rezept>
+        <Rezeptname>Pilav</Rezeptname>
+        <Autor>Vlar</Autor>
+        <Zutaten>
+            <Zutat Einheit="g">
+                <Name>Reis</Name>
+                <Menge>200.0</Menge>
+            </Zutat>
+            <Zutat Einheit="g">
+                <Name>Nudeln</Name>
+                <Menge>250.0</Menge>
+            </Zutat>
+            <Zutat Einheit="ml">
+                <Name>Wasser</Name>
+                <Menge>100.0</Menge>
+            </Zutat>
+            <Zutat Einheit="EL">
+                <Name>Planzen?l</Name>
+                <Menge>2.0</Menge>
+            </Zutat>
+            <Zutat Einheit="Prise">
+                <Name>Salz</Name>
+                <Menge>1.0</Menge>
+            </Zutat>
+        </Zutaten>
+        <Portionen>0</Portionen>
+        <Zubereitung>
+            <Arbeitszeit Einheit="std">
+                <Dauer>1</Dauer>
+            </Arbeitszeit>
+            <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
+            <Brennwert-p.P>275</Brennwert-p.P>
+            <VorgŠnge>
     Reis in einem feinen Sieb waschen und abtropfen lassen. 
-    In die Pfanne reichlich PflanzenÃ¶l geben, so dass ein Spiegel aus Ã–l entsteht. 
-    Die Nudeln zufÃ¼gen, goldgelb anbraten, den Reis zufÃ¼gen und umrÃ¼hren. 
-    Mit kaltem Wasser abschrecken und Salz hinzufÃ¼gen. 
-    Bis zum Siedepunkt kÃ¶cheln lassen, Herd ausmachen, 
+    In die Pfanne reichlich Pflanzen?l geben, so dass ein Spiegel aus Él entsteht. 
+    Die Nudeln zufÙgen, goldgelb anbraten, den Reis zufÙgen und umrÙhren. 
+    Mit kaltem Wasser abschrecken und Salz hinzufÙgen. 
+    Bis zum Siedepunkt k?cheln lassen, Herd ausmachen, 
     Deckel darauf legen und ausquellen lassen. 
-	Tipp: Man kann in das Wasser noch Curry, HÃ¼hnerbrÃ¼he oder 
-	RinderbrÃ¼he geben, je nachdem wozu man den Reis servieren will.
-	</VorgÃ¤nge>
-  </Zubereitung>
-  <Kommentieren>
-      <Kommentar Datum="2010-06-23" Kommentare="Hallo ince, 
-	Dein Reisrezept hÃ¶rt sich gut an. Nimmst Du Langkorn- oder Rundkornreis? 
-	Sind die Nudel nach dem garen noch zu erkennen? 
-	Liebe GrÃ¼ÃŸe Renate" Name="KÃ¼chenmungo" Zeit="12:00:00"/>
-	<Kommentar Datum="2009-09-11" Kommentare="Super lecker" Name="Astrid" Zeit="10:02:12"/>
-    </Kommentieren>
-</Rezept>
+	Tipp: Man kann in das Wasser noch Curry, HÙhnerbrÙhe oder 
+	RinderbrÙhe geben, je nachdem wozu man den Reis servieren will.
+	</VorgŠnge>
+        </Zubereitung>
+        <Kommentieren>
+            <Kommentar Name="KŸchenmungo" Datum="2010-06-23" Zeit="12:00:00" Kommentare="Hallo ince,   Dein Reisrezept h?rt sich gut an. Nimmst Du Langkorn- oder Rundkornreis?   Sind die Nudel nach dem garen noch zu erkennen?   Liebe GrÙ¤e Renate"/>
+            <Kommentar Name="Astrid" Datum="2009-09-11" Zeit="10:02:12" Kommentare="Super lecker"/>
+        </Kommentieren>
+    </Rezept>
 </Rezepte>
-

@@ -19,15 +19,15 @@ public class Aufgabe4b {
 
 	static Scanner scanner = new Scanner (System.in); 
 	private static Scanner input;
-	  
+
 	public static void main(String[] args) throws JAXBException, IOException {
 
 		 Boolean anzeige = true;
 		 int eingabe = 0;
-	  
+
 	    //xml_File in Datei speichern
 	    File file = new File("src/Aufgabe3dSchokoladenkuchen.xml");
-	    
+
 	    //jaxb Objekt erstellen
 	    JAXBContext context = JAXBContext.newInstance(Rezepte.class);
 	    //Marshaller
@@ -35,14 +35,13 @@ public class Aufgabe4b {
 	    //Unmarshaller
 	    Unmarshaller um = context.createUnmarshaller();
 	    Rezepte r = (Rezepte) um.unmarshal(file);
-	 
-	    
+
+
 	   //Menue
       while (anzeige) {
           System.out.println();
           System.out.println("1. Ausgabe XML Datei");
           System.out.println("2. Neuen Kommentar verfassen");
-          System.out.println("3. Beenden");
           System.out.println();
           eingabe = scanner.nextInt();
 
@@ -56,10 +55,6 @@ public class Aufgabe4b {
               eingeben(r, file, m);
           }
 
-          // Menue beenden
-          if (eingabe == 3) {
-              anzeige = false;
-          }
           else
         	  System.out.println("Ungültige Eingabe");
       }
@@ -69,20 +64,21 @@ public class Aufgabe4b {
       public static void ausgabe(Rezepte r) {
     	  for (int i = 0; i<=r.getRezept().size() -1; i++){
     		  System.out.println("Rezept: ");
-    		  System.out.println("Rezeptname" + r.getRezept().get(i).getRezeptname());
-    		  System.out.println("Autor" + r.getRezept().get(i).getAutor());
+    		  System.out.println("Rezeptname: " + r.getRezept().get(i).getRezeptname());
+    		  System.out.println("Autor: " + r.getRezept().get(i).getAutor());
     		  
     		  for (int j=0;j<=r.getRezept().get(i).getZutaten().getZutat().size() -1; j++){
-    			  System.out.println("" + r.getRezept().get(i).getZutaten().getZutat().get(j).getMenge());
-    			  System.out.println("" + r.getRezept().get(i).getZutaten().getZutat().get(j).getEinheit());
-    			  System.out.println("" + r.getRezept().get(i).getZutaten().getZutat().get(j).getName());
+    			  System.out.println("" + r.getRezept().get(i).getZutaten().getZutat().get(j).getMenge()
+    			  + " " + r.getRezept().get(i).getZutaten().getZutat().get(j).getEinheit()
+    			  + " " + r.getRezept().get(i).getZutaten().getZutat().get(j).getName());
     		  }
-    		  System.out.println("Portionen:" + r.getRezept().get(i).getPortionen());
     		  
-    		  System.out.println("Zubereitung\nArbeitszeit" + r.getRezept().get(i).getZubereitung().getArbeitszeit());
-    		  System.out.println("Schwierigkeitsgrad" + r.getRezept().get(i).getZubereitung().getSchwierigkeitsgrad());
-    		  System.out.println("Brennwert pP" + r.getRezept().get(i).getZubereitung().getBrennwertPP());
-    		  System.out.println("\n\nZubereitung\nArbeitszeit" + r.getRezept().get(i).getZubereitung().getVorgänge());
+    		  System.out.println("Portionen: " + r.getRezept().get(i).getPortionen());
+    		  
+    		  System.out.println("Zubereitung\nArbeitszeit: " + r.getRezept().get(i).getZubereitung().getArbeitszeit());
+    		  System.out.println("Schwierigkeitsgrad: " + r.getRezept().get(i).getZubereitung().getSchwierigkeitsgrad());
+    		  System.out.println("Brennwert pP: " + r.getRezept().get(i).getZubereitung().getBrennwertPP());
+    		  System.out.println("\n\nZubereitung\nArbeitszeit: " + r.getRezept().get(i).getZubereitung().getVorgänge());
     		  
     		  
               for (int k = 0; k <= r.getRezept().get(i).getKommentieren().getKommentar().size() - 1; k++) {
@@ -96,7 +92,7 @@ public class Aufgabe4b {
       }
     	  
     	
-		
+
       
    // Neuen Kommentar einfuegen
       public static void eingeben(Rezepte r, File file, Marshaller m) throws IOException, JAXBException {
@@ -109,16 +105,16 @@ public class Aufgabe4b {
 		if (x > r.getRezept().size()) {
             System.out.println("Rezept nicht vorhanden.");
         }
-		
+
 		Kommentieren.Kommentar neuerKommentar = new Kommentieren.Kommentar();
-		
+
 		System.out.println("\nName: ");
 		neuerKommentar.setName(getString());
-		
+
 		//automatische Systemzeit ermitteln
 		Timestamp zeit = new Timestamp(System.currentTimeMillis());
         System.out.print("Datum: " + zeit);
-		
+
 		System.out.println("\nDein Kommentar:");
 		neuerKommentar.setKommentare(getString());
         
@@ -127,11 +123,13 @@ public class Aufgabe4b {
         // Formatierung der XML-Datei
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         
-        //Kommentar hinzufügen
+        //Kommentar hinzufŸgen
         r.getRezept().get(0).getKommentieren().getKommentar().add(x,neuerKommentar);
 		m.marshal(r,w);
      }
-		
+      //Menü wieder aufrufen für neue Eingaben
+      boolean anzeige= true;
+
 		// Bugfixing (Scanner wartet ohne eigene Methode nicht auf Eingabe vom Nutzer!)
 	    public static String getString() {
 	        input = new Scanner(System.in);

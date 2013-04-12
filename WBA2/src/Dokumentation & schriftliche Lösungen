@@ -142,9 +142,14 @@ Exception in thread "main" javax.xml.bind.UnmarshalException: unerwartetes Eleme
 	at javax.xml.bind.helpers.AbstractUnmarshallerImpl.unmarshal(AbstractUnmarshallerImpl.java:169)
 	at generated.Aufgabe4b.main(Aufgabe4b.java:37)
 
-
-
-
+Es stellt sich heraus, dass die XML-Datei, aus der die Dateinen gelesen werden sollen nach Änderungen nicht mehr kompatibel ist!
+Die Datei wird aus der XSD-Datei neu generiert und der Fehler ist behoben.
+Kommentare können nun hinzugefügt werden und werden in der Urpsungs-XML gespeichert.
+Leider bestehen noch drei Probleme:
+1)Die durch den Timestamp ermittelte Zeit wird nicht korrekt in der XML gespeichert
+2)Wenn es bei der Eingabe zu einer Fehlermeldung(exception) kommt, kann es vorkommen, dass die Urpsrungs-XML gelöscht wird und 
+keinen Inhalt mehr aufweist.
+3)Kommentare können nur zum ersten Rezept hinzugefügt werden. Der Grund dafür ist unbekannt.
 
 Aufgabe5 - Diskutieren Sie, warum es sinnvoll ist Daten in Formaten wie XML oder JSON zu speichern. 
 Stellen Sie außerdem die beiden Formate gegenüber und erläutern Sie kurz deren Vor- und Nachteile.

@@ -40,6 +40,7 @@
         <Kommentieren>
             <Kommentar Name="swieselchen" Datum="2001-01-01" Zeit="12:00:00" Kommentare="Habe Deinen Kuchen gestern gebacken      (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvert?re,      zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert.      Ich ?brigends auch, super Rezept."/>
             <Kommentar Name="Julia" Kommentare="Echt ein super Rezept"/>
+            <Kommentar Name="Piet" Kommentare="unfassbar lecker!"/>
         </Kommentieren>
     </Rezept>
     <Rezept>
@@ -59,7 +60,7 @@
                 <Menge>100.0</Menge>
             </Zutat>
             <Zutat Einheit="EL">
-                <Name>Planzenšl</Name>
+                <Name>Planzen?l</Name>
                 <Menge>2.0</Menge>
             </Zutat>
             <Zutat Einheit="Prise">
@@ -76,17 +77,17 @@
             <Brennwert-p.P>275</Brennwert-p.P>
             <VorgŠnge>
     Reis in einem feinen Sieb waschen und abtropfen lassen. 
-    In die Pfanne reichlich Pflanzenšl geben, so dass ein Spiegel aus …l entsteht. 
-    Die Nudeln zufŸgen, goldgelb anbraten, den Reis zufŸgen und umrŸhren. 
-    Mit kaltem Wasser abschrecken und Salz hinzufŸgen. 
-    Bis zum Siedepunkt kšcheln lassen, Herd ausmachen, 
+    In die Pfanne reichlich Pflanzen?l geben, so dass ein Spiegel aus Él entsteht. 
+    Die Nudeln zufÙgen, goldgelb anbraten, den Reis zufÙgen und umrÙhren. 
+    Mit kaltem Wasser abschrecken und Salz hinzufÙgen. 
+    Bis zum Siedepunkt k?cheln lassen, Herd ausmachen, 
     Deckel darauf legen und ausquellen lassen. 
-	Tipp: Man kann in das Wasser noch Curry, HŸhnerbrŸhe oder 
-	RinderbrŸhe geben, je nachdem wozu man den Reis servieren will.
+	Tipp: Man kann in das Wasser noch Curry, HÙhnerbrÙhe oder 
+	RinderbrÙhe geben, je nachdem wozu man den Reis servieren will.
 	</VorgŠnge>
         </Zubereitung>
         <Kommentieren>
-            <Kommentar Name="KŸchenmungo" Datum="2010-06-23" Zeit="12:00:00" Kommentare="Hallo ince,   Dein Reisrezept hšrt sich gut an. Nimmst Du Langkorn- oder Rundkornreis?   Sind die Nudel nach dem garen noch zu erkennen?   Liebe GrŸ§e Renate"/>
+            <Kommentar Name="KŸchenmungo" Datum="2010-06-23" Zeit="12:00:00" Kommentare="Hallo ince,   Dein Reisrezept h?rt sich gut an. Nimmst Du Langkorn- oder Rundkornreis?   Sind die Nudel nach dem garen noch zu erkennen?   Liebe GrÙ¤e Renate"/>
             <Kommentar Name="Astrid" Datum="2009-09-11" Zeit="10:02:12" Kommentare="Super lecker"/>
         </Kommentieren>
     </Rezept>
