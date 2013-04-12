@@ -1,60 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Rezept xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Aufgabe3d.xsd">
-  <Allgemeines>
-    <Rezeptname>Lenchen's Schokoladenkuchen</Rezeptname>
-    <Autor>schnuebi</Autor>
-  </Allgemeines>
-  <Zutaten>
-    <Zutat>Butter</Zutat>
-    <Gewicht>200</Gewicht>
-    <Einheit>g</Einheit>
-    
-     <Zutat>Zucker</Zutat>
-    <Gewicht>200</Gewicht>
-    <Einheit>g</Einheit>
-    
-     <Zutat>Schokolade, Blockschokolade</Zutat>
-    <Gewicht>200</Gewicht>
-    <Einheit>g</Einheit>
-    
-     <Zutat>Mehl</Zutat>
-    <Gewicht>120</Gewicht>
-    <Einheit>g</Einheit>
-    
-     <Zutat>Backpulver</Zutat>
-    <Gewicht>0.5</Gewicht>
-    <Einheit>TL</Einheit>
-    
-     <Zutat>Vanillezucker</Zutat>
-    <Gewicht>1</Gewicht>
-    <Einheit>Pkt.</Einheit>
-    
-     <Zutat>Ei(er)</Zutat>
-    <Gewicht>4</Gewicht>
-    <Einheit></Einheit>
-  </Zutaten>
-  
-  <Portionen>16</Portionen>
-  <Zubereitung>
-    <Arbeitszeit>01:00:00</Arbeitszeit>
-    <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
-    <Brennwert-p.P>295</Brennwert-p.P>
-    <Vorg√§nge>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Rezept>
+    <Allgemeines>
+        <Rezeptname>Lenchen's Schokoladenkuchen</Rezeptname>
+        <Autor>schnuebi</Autor>
+    </Allgemeines>
+    <Zutaten>
+        <Zutat>Ei(er)</Zutat>
+        <Gewicht>4.0</Gewicht>
+        <Einheit></Einheit>
+    </Zutaten>
+    <Portionen>16</Portionen>
+    <Zubereitung>
+        <Arbeitszeit>01:00:00</Arbeitszeit>
+        <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
+        <Brennwert-p.P>295</Brennwert-p.P>
+        <Vorgänge>
     Butter und Schokolade im Wasserbad schmelzen. 
-    Eier trennen. Eiwei√ü steif schlagen. 
-    Eigelbe, Zucker und Vanillezucker verr√ºhren. 
-    Geschmolzene Butter-Schokomasse hinzuf√ºgen und mischen. 
-    Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiwei√üe vorsichtig unterheben. 
+    Eier trennen. Eiweiß steif schlagen. 
+    Eigelbe, Zucker und Vanillezucker verrühren. 
+    Geschmolzene Butter-Schokomasse hinzufügen und mischen. 
+    Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiße vorsichtig unterheben. 
     In eine gut gefettete Form geben. 
-	Bei 180¬∞Grad 40 ‚Äì 50 Minuten backen.</Vorg√§nge>
-  </Zubereitung>
-  <Kommentieren Kommentar_hilfreich="ja">
-    <Name>swieselchen</Name>
-    <Datum>2002-02-07</Datum>
-    <Zeit>18:49:00</Zeit>
-    <Kommentare>Habe Deinen Kuchen gestern gebacken 
-    (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvert√ºre, 
+	Bei 180°Grad 40 – 50 Minuten backen.</Vorgänge>
+    </Zubereitung>
+    <Kommentieren Kommentar_hilfreich="ja">
+        <Name>swieselchen</Name>
+        <Datum>2002-02-07</Datum>
+        <Zeit>18:49:00</Zeit>
+        <Kommentare>Habe Deinen Kuchen gestern gebacken 
+    (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvertüre, 
     zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert. 
-    Ich √ºbrigends auch, super Rezept.</Kommentare>
+    Ich übrigends auch, super Rezept.</Kommentare>
     </Kommentieren>
 </Rezept>

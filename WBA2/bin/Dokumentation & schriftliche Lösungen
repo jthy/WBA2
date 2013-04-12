@@ -99,6 +99,7 @@ gefordert, aus der bestehenden XML Daten herauszulesen.
 Die Datei wird angepasst und zum Teil neugeschrieben.
 Die Daten werden nun statt mit der set-Methode mit der get-Methode eingelesen.
 
+b) 
 Aufgabe5 - Diskutieren Sie, warum es sinnvoll ist Daten in Formaten wie XML oder JSON zu speichern. 
 Stellen Sie au§erdem die beiden Formate gegenŸber und erlŠutern Sie kurz deren Vor- und Nachteile.
 
