@@ -100,12 +100,54 @@ Die Datei wird angepasst und zum Teil neugeschrieben.
 Die Daten werden nun statt mit der set-Methode mit der get-Methode eingelesen.
 
 Ein Problem ergibt sich aus der Auflistung der Zutaten, da zunächst nur eine Zutat ausgegeben wird. 
-Das Problem kann durch eine Schleife gelöst werden, allerdings
+Das Problem kann durch eine Schleife gelöst werden.
 
-b) 
+b) Es wird die neue Methode eingeben erstellt.
+Über die Tastatur kann das Rezept eingegeben werden, zu dem der Kommentar erstellt werden soll.
+Ist dies ausgewählt, können Name und Kommentar eingegeben werden. Die Systemzeit wird automaitsich ermittelt.
+Ist das ausgewählte Rezept nicht vorhanden, wird eine Fehlermeldung ausgegeben.
+Die Kommentare werden dann der XML-Datei hinzugefügt.
+
+Das Programm zeigt keine Fehler an, jedoch kommt es bei der Ausführung zu folgender Fehlermeldung:
+
+Das Element chefkoch befindet sich jedoch nach einigen Änderungen nicht mehr in der Datei(diese wurde in Rezepte umbenannt).
+
+Exception in thread "main" javax.xml.bind.UnmarshalException: unerwartetes Element (URI:"", lokal:"Chefkoch"). Erwartete Elemente sind <{}Rezepte>
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext.handleEvent(UnmarshallingContext.java:662)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.Loader.reportError(Loader.java:258)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.Loader.reportError(Loader.java:253)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.Loader.reportUnexpectedChildElement(Loader.java:120)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext$DefaultRootLoader.childElement(UnmarshallingContext.java:1063)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext._startElement(UnmarshallingContext.java:498)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallingContext.startElement(UnmarshallingContext.java:480)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.SAXConnector.startElement(SAXConnector.java:150)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:501)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:626)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3104)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:921)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:647)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:140)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:511)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:808)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:737)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:119)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1205)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:522)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal0(UnmarshallerImpl.java:218)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal(UnmarshallerImpl.java:190)
+	at javax.xml.bind.helpers.AbstractUnmarshallerImpl.unmarshal(AbstractUnmarshallerImpl.java:137)
+	at javax.xml.bind.helpers.AbstractUnmarshallerImpl.unmarshal(AbstractUnmarshallerImpl.java:142)
+	at javax.xml.bind.helpers.AbstractUnmarshallerImpl.unmarshal(AbstractUnmarshallerImpl.java:151)
+	at javax.xml.bind.helpers.AbstractUnmarshallerImpl.unmarshal(AbstractUnmarshallerImpl.java:169)
+	at generated.Aufgabe4b.main(Aufgabe4b.java:37)
+
+
+
+
+
 Aufgabe5 - Diskutieren Sie, warum es sinnvoll ist Daten in Formaten wie XML oder JSON zu speichern. 
 Stellen Sie außerdem die beiden Formate gegenüber und erläutern Sie kurz deren Vor- und Nachteile.
-
 
 XML:
 

@@ -1,71 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Chefkoch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Aufgabe3d.xsd">
+<Rezepte xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Aufgabe3d.xsd">
   <Rezept>
-    <Allgemeines>
         <Rezeptname>Lenchen's Schokoladenkuchen</Rezeptname>
         <Autor>schnuebi</Autor>
-    </Allgemeines>
     <Zutaten>
-        <Zutat>Ei(er)</Zutat>
-        <Gewicht>4.0</Gewicht>
-        <Einheit></Einheit>
+      <Zutat Einheit="g">
+        <Name>Mehl</Name>
+        <Menge>400</Menge>
+      </Zutat>
+      <Zutat Einheit="Stk.">
+        <Name>Ei(er)</Name>
+        <Menge>4</Menge>
+      </Zutat>
+      <Zutat Einheit="Prise">
+        <Name>Salz</Name>
+        <Menge>2</Menge>
+      </Zutat>
+      <Zutat Einheit="g">
+        <Name>Zucker</Name>
+        <Menge>200</Menge>
+      </Zutat>
     </Zutaten>
     <Portionen>16</Portionen>
     <Zubereitung>
-        <Arbeitszeit>01:00:00</Arbeitszeit>
+        <Arbeitszeit Einheit="std">
+        	<Dauer>1</Dauer>
+     	</Arbeitszeit>
         <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
         <Brennwert-p.P>295</Brennwert-p.P>
-        <Vorg�nge>
+        <Vorgänge>
     Butter und Schokolade im Wasserbad schmelzen. 
     Eier trennen. Eiwei� steif schlagen. 
     Eigelbe, Zucker und Vanillezucker verr�hren. 
     Geschmolzene Butter-Schokomasse hinzuf�gen und mischen. 
     Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiwei�e vorsichtig unterheben. 
     In eine gut gefettete Form geben. 
-	Bei 180�Grad 40 � 50 Minuten backen.</Vorg�nge>
+	Bei 180�Grad 40 � 50 Minuten backen.</Vorgänge>
     </Zubereitung>
-    <Kommentieren Kommentar_hilfreich="ja">
-        <Name>swieselchen</Name>
-        <Datum>2002-02-07</Datum>
-        <Zeit>18:49:00</Zeit>
-        <Kommentare>Habe Deinen Kuchen gestern gebacken 
+     <Kommentieren>
+      <Kommentar Datum="2001-01-01" Kommentare="Habe Deinen Kuchen gestern gebacken 
     (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvert�re, 
     zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert. 
-    Ich �brigends auch, super Rezept.</Kommentare>
+    Ich �brigends auch, super Rezept." Name="swieselchen" Zeit="12:00:00"/>
     </Kommentieren>
 </Rezept>
 <Rezept>
-  <Allgemeines>
     <Rezeptname>Pilav</Rezeptname>
     <Autor>Vlar</Autor>
-  </Allgemeines>
-    <Zutaten>
-    <Zutat>Reis</Zutat>
-    <Gewicht>4</Gewicht>
-    <Einheit>Gläser</Einheit>
-    
-    <Zutat>Nudeln (Vermicelles, Pasta da minestra)</Zutat>
-    <Gewicht>1</Gewicht>
-    <Einheit>Glas</Einheit>
-    
-     <Zutat>Wasser</Zutat>
-    <Gewicht>8</Gewicht>
-    <Einheit>Gläser</Einheit>
-    
-     <Zutat>Planzenöl</Zutat>
-    <Gewicht></Gewicht>
-    <Einheit></Einheit>
-    
-     <Zutat>Salz</Zutat>
-    <Gewicht></Gewicht>
-    <Einheit></Einheit>
-   
+   <Zutaten>
+   	  <Zutat Einheit="g">
+        <Name>Reis</Name>
+        <Menge>200</Menge>
+      </Zutat>
+     <Zutat Einheit="g">
+        <Name>Nudeln</Name>
+        <Menge>250</Menge>
+      </Zutat>
+  	<Zutat Einheit="ml">
+        <Name>Wasser</Name>
+        <Menge>100</Menge>
+      </Zutat>
+      <Zutat Einheit="EL">
+        <Name>Planzenöl</Name>
+        <Menge>2</Menge>
+      </Zutat>
+    <Zutat Einheit="Prise">
+        <Name>Salz</Name>
+        <Menge>1</Menge>
+      </Zutat>
   </Zutaten>
   <Portionen>0</Portionen>
   <Zubereitung>
-    <Arbeitszeit>00:10:00</Arbeitszeit>
+    <Arbeitszeit Einheit="std">
+        <Dauer>1</Dauer>
+      </Arbeitszeit>
     <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
-    <Brennwert-p.P></Brennwert-p.P>
+    <Brennwert-p.P>275</Brennwert-p.P>
     <Vorgänge>
     Reis in einem feinen Sieb waschen und abtropfen lassen. 
     In die Pfanne reichlich Pflanzenöl geben, so dass ein Spiegel aus Öl entsteht. 
@@ -77,20 +87,13 @@
 	Rinderbrühe geben, je nachdem wozu man den Reis servieren will.
 	</Vorgänge>
   </Zubereitung>
-  <Kommentieren Kommentar_hilfreich="ja">
-    <Name>küchenmungo</Name>
-    <Datum>2010-06-23</Datum>
-    <Zeit>14:46:00</Zeit>
-    <Kommentare>Hallo ince, 
+  <Kommentieren>
+      <Kommentar Datum="2010-06-23" Kommentare="Hallo ince, 
 	Dein Reisrezept hört sich gut an. Nimmst Du Langkorn- oder Rundkornreis? 
 	Sind die Nudel nach dem garen noch zu erkennen? 
-	Liebe Grüße Renate
-	</Kommentare>
-	<Name>Astrid</Name>
-    <Datum>2009-09-11</Datum>
-    <Zeit>10:02:12</Zeit>
-    <Kommentare>Super lecker!</Kommentare>
-  </Kommentieren>
+	Liebe Grüße Renate" Name="Küchenmungo" Zeit="12:00:00"/>
+	<Kommentar Datum="2009-09-11" Kommentare="Super lecker" Name="Astrid" Zeit="10:02:12"/>
+    </Kommentieren>
 </Rezept>
-</Chefkoch>
+</Rezepte>
 

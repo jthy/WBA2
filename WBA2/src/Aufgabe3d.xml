@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Chefkoch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Aufgabe3d.xsd">
+<Rezepte xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Aufgabe3d.xsd">
   <Rezept>
-    <Allgemeines>
-      <Rezeptname>Rezeptname</Rezeptname>
-      <Autor>Autor</Autor>
-    </Allgemeines>
+    <Rezeptname>Rezeptname</Rezeptname>
+    <Autor>Autor</Autor>
     <Zutaten>
-      <Zutat>Zutat</Zutat>
-      <Gewicht>0</Gewicht>
-      <Einheit>Einheit</Einheit>
+      <Zutat Einheit="g">
+        <Name>Name</Name>
+        <Menge>0.0</Menge>
+      </Zutat>
     </Zutaten>
     <Portionen>0</Portionen>
     <Zubereitung>
-      <Arbeitszeit>12:00:00</Arbeitszeit>
+      <Arbeitszeit Einheit="std">
+        <Dauer>0</Dauer>
+      </Arbeitszeit>
       <Schwierigkeitsgrad>Schwierigkeitsgrad</Schwierigkeitsgrad>
       <Brennwert-p.P>0</Brennwert-p.P>
       <Vorgänge>Vorgänge</Vorgänge>
     </Zubereitung>
     <Kommentieren>
-      <Name>Name</Name>
-      <Datum>2001-01-01</Datum>
-      <Zeit>12:00:00</Zeit>
-      <Kommentare>Kommentare</Kommentare>
+      <Kommentar Datum="2001-01-01" Kommentare="" Name="" Zeit="12:00:00"/>
     </Kommentieren>
   </Rezept>
-</Chefkoch>
+</Rezepte>

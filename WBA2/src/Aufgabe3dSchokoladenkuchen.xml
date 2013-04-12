@@ -1,96 +1,93 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Chefkoch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Aufgabe3d.xsd">
-  <Rezept>
-    <Allgemeines>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Rezepte>
+    <Rezept>
         <Rezeptname>Lenchen's Schokoladenkuchen</Rezeptname>
         <Autor>schnuebi</Autor>
-    </Allgemeines>
-    <Zutaten>
-        <Zutat>Ei(er)</Zutat>
-        <Gewicht>4.0</Gewicht>
-        <Einheit></Einheit>
-    </Zutaten>
-    <Portionen>16</Portionen>
-    <Zubereitung>
-        <Arbeitszeit>01:00:00</Arbeitszeit>
-        <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
-        <Brennwert-p.P>295</Brennwert-p.P>
-        <VorgÔøΩnge>
+        <Zutaten>
+            <Zutat Einheit="g">
+                <Name>Mehl</Name>
+                <Menge>400.0</Menge>
+            </Zutat>
+            <Zutat Einheit="Stk.">
+                <Name>Ei(er)</Name>
+                <Menge>4.0</Menge>
+            </Zutat>
+            <Zutat Einheit="Prise">
+                <Name>Salz</Name>
+                <Menge>2.0</Menge>
+            </Zutat>
+            <Zutat Einheit="g">
+                <Name>Zucker</Name>
+                <Menge>200.0</Menge>
+            </Zutat>
+        </Zutaten>
+        <Portionen>16</Portionen>
+        <Zubereitung>
+            <Arbeitszeit Einheit="std">
+                <Dauer>1</Dauer>
+            </Arbeitszeit>
+            <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
+            <Brennwert-p.P>295</Brennwert-p.P>
+            <Vorgänge>
     Butter und Schokolade im Wasserbad schmelzen. 
-    Eier trennen. EiweiÔøΩ steif schlagen. 
-    Eigelbe, Zucker und Vanillezucker verrÔøΩhren. 
-    Geschmolzene Butter-Schokomasse hinzufÔøΩgen und mischen. 
-    Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen EiweiÔøΩe vorsichtig unterheben. 
+    Eier trennen. Eiwei? steif schlagen. 
+    Eigelbe, Zucker und Vanillezucker verr?hren. 
+    Geschmolzene Butter-Schokomasse hinzuf?gen und mischen. 
+    Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiwei?e vorsichtig unterheben. 
     In eine gut gefettete Form geben. 
-	Bei 180ÔøΩGrad 40 ÔøΩ 50 Minuten backen.</VorgÔøΩnge>
-    </Zubereitung>
-    <Kommentieren Kommentar_hilfreich="ja">
-        <Name>swieselchen</Name>
-        <Datum>2002-02-07</Datum>
-        <Zeit>18:49:00</Zeit>
-        <Kommentare>Habe Deinen Kuchen gestern gebacken 
-    (kleine Abwandlung: statt Blockschokolade hatte ich nur KuvertÔøΩre, 
-    zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert. 
-    Ich ÔøΩbrigends auch, super Rezept.</Kommentare>
-    </Kommentieren>
-</Rezept>
-<Rezept>
-  <Allgemeines>
-    <Rezeptname>Pilav</Rezeptname>
-    <Autor>Vlar</Autor>
-  </Allgemeines>
-    <Zutaten>
-    <Zutat>Reis</Zutat>
-    <Gewicht>4</Gewicht>
-    <Einheit>Gl√§ser</Einheit>
-    
-    <Zutat>Nudeln (Vermicelles, Pasta da minestra)</Zutat>
-    <Gewicht>1</Gewicht>
-    <Einheit>Glas</Einheit>
-    
-     <Zutat>Wasser</Zutat>
-    <Gewicht>8</Gewicht>
-    <Einheit>Gl√§ser</Einheit>
-    
-     <Zutat>Planzen√∂l</Zutat>
-    <Gewicht></Gewicht>
-    <Einheit></Einheit>
-    
-     <Zutat>Salz</Zutat>
-    <Gewicht></Gewicht>
-    <Einheit></Einheit>
-   
-  </Zutaten>
-  <Portionen>0</Portionen>
-  <Zubereitung>
-    <Arbeitszeit>00:10:00</Arbeitszeit>
-    <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
-    <Brennwert-p.P></Brennwert-p.P>
-    <Vorg√§nge>
+	Bei 180?Grad 40 ? 50 Minuten backen.</Vorgänge>
+        </Zubereitung>
+        <Kommentieren>
+            <Kommentar Name="swieselchen" Datum="2001-01-01" Zeit="12:00:00" Kommentare="Habe Deinen Kuchen gestern gebacken      (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvert?re,      zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert.      Ich ?brigends auch, super Rezept."/>
+            <Kommentar Name="Julia" Kommentare="Echt ein super Rezept"/>
+        </Kommentieren>
+    </Rezept>
+    <Rezept>
+        <Rezeptname>Pilav</Rezeptname>
+        <Autor>Vlar</Autor>
+        <Zutaten>
+            <Zutat Einheit="g">
+                <Name>Reis</Name>
+                <Menge>200.0</Menge>
+            </Zutat>
+            <Zutat Einheit="g">
+                <Name>Nudeln</Name>
+                <Menge>250.0</Menge>
+            </Zutat>
+            <Zutat Einheit="ml">
+                <Name>Wasser</Name>
+                <Menge>100.0</Menge>
+            </Zutat>
+            <Zutat Einheit="EL">
+                <Name>Planzenöl</Name>
+                <Menge>2.0</Menge>
+            </Zutat>
+            <Zutat Einheit="Prise">
+                <Name>Salz</Name>
+                <Menge>1.0</Menge>
+            </Zutat>
+        </Zutaten>
+        <Portionen>0</Portionen>
+        <Zubereitung>
+            <Arbeitszeit Einheit="std">
+                <Dauer>1</Dauer>
+            </Arbeitszeit>
+            <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
+            <Brennwert-p.P>275</Brennwert-p.P>
+            <Vorgänge>
     Reis in einem feinen Sieb waschen und abtropfen lassen. 
-    In die Pfanne reichlich Pflanzen√∂l geben, so dass ein Spiegel aus √ñl entsteht. 
-    Die Nudeln zuf√ºgen, goldgelb anbraten, den Reis zuf√ºgen und umr√ºhren. 
-    Mit kaltem Wasser abschrecken und Salz hinzuf√ºgen. 
-    Bis zum Siedepunkt k√∂cheln lassen, Herd ausmachen, 
+    In die Pfanne reichlich Pflanzenöl geben, so dass ein Spiegel aus Öl entsteht. 
+    Die Nudeln zufügen, goldgelb anbraten, den Reis zufügen und umrühren. 
+    Mit kaltem Wasser abschrecken und Salz hinzufügen. 
+    Bis zum Siedepunkt köcheln lassen, Herd ausmachen, 
     Deckel darauf legen und ausquellen lassen. 
-	Tipp: Man kann in das Wasser noch Curry, H√ºhnerbr√ºhe oder 
-	Rinderbr√ºhe geben, je nachdem wozu man den Reis servieren will.
-	</Vorg√§nge>
-  </Zubereitung>
-  <Kommentieren Kommentar_hilfreich="ja">
-    <Name>k√ºchenmungo</Name>
-    <Datum>2010-06-23</Datum>
-    <Zeit>14:46:00</Zeit>
-    <Kommentare>Hallo ince, 
-	Dein Reisrezept h√∂rt sich gut an. Nimmst Du Langkorn- oder Rundkornreis? 
-	Sind die Nudel nach dem garen noch zu erkennen? 
-	Liebe Gr√º√üe Renate
-	</Kommentare>
-	<Name>Astrid</Name>
-    <Datum>2009-09-11</Datum>
-    <Zeit>10:02:12</Zeit>
-    <Kommentare>Super lecker!</Kommentare>
-  </Kommentieren>
-</Rezept>
-</Chefkoch>
-
+	Tipp: Man kann in das Wasser noch Curry, Hühnerbrühe oder 
+	Rinderbrühe geben, je nachdem wozu man den Reis servieren will.
+	</Vorgänge>
+        </Zubereitung>
+        <Kommentieren>
+            <Kommentar Name="Küchenmungo" Datum="2010-06-23" Zeit="12:00:00" Kommentare="Hallo ince,   Dein Reisrezept hört sich gut an. Nimmst Du Langkorn- oder Rundkornreis?   Sind die Nudel nach dem garen noch zu erkennen?   Liebe Grüße Renate"/>
+            <Kommentar Name="Astrid" Datum="2009-09-11" Zeit="10:02:12" Kommentare="Super lecker"/>
+        </Kommentieren>
+    </Rezept>
+</Rezepte>
