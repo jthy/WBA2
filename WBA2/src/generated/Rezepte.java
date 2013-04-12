@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.6 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2013.04.12 um 01:20:26 PM CEST 
+// Generiert: 2013.04.12 um 02:02:52 PM CEST 
 //
 
 
@@ -121,10 +121,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *                       &lt;complexContent>
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                           &lt;sequence>
- *                             &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                             &lt;element name="Datum" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *                             &lt;element name="Zeit" type="{http://www.w3.org/2001/XMLSchema}time"/>
- *                             &lt;element name="Kommentare" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                             &lt;element name="Kommentar" maxOccurs="unbounded" minOccurs="0">
+ *                               &lt;complexType>
+ *                                 &lt;complexContent>
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                                     &lt;attribute name="Datum" type="{http://www.w3.org/2001/XMLSchema}date" />
+ *                                     &lt;attribute name="Zeit" type="{http://www.w3.org/2001/XMLSchema}time" />
+ *                                     &lt;attribute name="Kommentare" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                                   &lt;/restriction>
+ *                                 &lt;/complexContent>
+ *                               &lt;/complexType>
+ *                             &lt;/element>
  *                           &lt;/sequence>
  *                         &lt;/restriction>
  *                       &lt;/complexContent>
@@ -278,10 +286,18 @@ public class Rezepte {
      *             &lt;complexContent>
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                 &lt;sequence>
-     *                   &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                   &lt;element name="Datum" type="{http://www.w3.org/2001/XMLSchema}date"/>
-     *                   &lt;element name="Zeit" type="{http://www.w3.org/2001/XMLSchema}time"/>
-     *                   &lt;element name="Kommentare" type="{http://www.w3.org/2001/XMLSchema}string"/>
+     *                   &lt;element name="Kommentar" maxOccurs="unbounded" minOccurs="0">
+     *                     &lt;complexType>
+     *                       &lt;complexContent>
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                           &lt;attribute name="Datum" type="{http://www.w3.org/2001/XMLSchema}date" />
+     *                           &lt;attribute name="Zeit" type="{http://www.w3.org/2001/XMLSchema}time" />
+     *                           &lt;attribute name="Kommentare" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                         &lt;/restriction>
+     *                       &lt;/complexContent>
+     *                     &lt;/complexType>
+     *                   &lt;/element>
      *                 &lt;/sequence>
      *               &lt;/restriction>
      *             &lt;/complexContent>
@@ -466,10 +482,18 @@ public class Rezepte {
          *   &lt;complexContent>
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *       &lt;sequence>
-         *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *         &lt;element name="Datum" type="{http://www.w3.org/2001/XMLSchema}date"/>
-         *         &lt;element name="Zeit" type="{http://www.w3.org/2001/XMLSchema}time"/>
-         *         &lt;element name="Kommentare" type="{http://www.w3.org/2001/XMLSchema}string"/>
+         *         &lt;element name="Kommentar" maxOccurs="unbounded" minOccurs="0">
+         *           &lt;complexType>
+         *             &lt;complexContent>
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *                 &lt;attribute name="Datum" type="{http://www.w3.org/2001/XMLSchema}date" />
+         *                 &lt;attribute name="Zeit" type="{http://www.w3.org/2001/XMLSchema}time" />
+         *                 &lt;attribute name="Kommentare" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *               &lt;/restriction>
+         *             &lt;/complexContent>
+         *           &lt;/complexType>
+         *         &lt;/element>
          *       &lt;/sequence>
          *     &lt;/restriction>
          *   &lt;/complexContent>
@@ -480,118 +504,174 @@ public class Rezepte {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "name",
-            "datum",
-            "zeit",
-            "kommentare"
+            "kommentar"
         })
         public static class Kommentieren {
 
-            @XmlElement(name = "Name", required = true)
-            protected String name;
-            @XmlElement(name = "Datum", required = true)
-            @XmlSchemaType(name = "date")
-            protected XMLGregorianCalendar datum;
-            @XmlElement(name = "Zeit", required = true)
-            @XmlSchemaType(name = "time")
-            protected XMLGregorianCalendar zeit;
-            @XmlElement(name = "Kommentare", required = true)
-            protected String kommentare;
+            @XmlElement(name = "Kommentar")
+            protected List<Rezepte.Rezept.Kommentieren.Kommentar> kommentar;
 
             /**
-             * Ruft den Wert der name-Eigenschaft ab.
+             * Gets the value of the kommentar property.
              * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             * <p>
+             * This accessor method returns a reference to the live list,
+             * not a snapshot. Therefore any modification you make to the
+             * returned list will be present inside the JAXB object.
+             * This is why there is not a <CODE>set</CODE> method for the kommentar property.
+             * 
+             * <p>
+             * For example, to add a new item, do as follows:
+             * <pre>
+             *    getKommentar().add(newItem);
+             * </pre>
+             * 
+             * 
+             * <p>
+             * Objects of the following type(s) are allowed in the list
+             * {@link Rezepte.Rezept.Kommentieren.Kommentar }
+             * 
+             * 
              */
-            public String getName() {
-                return name;
+            public List<Rezepte.Rezept.Kommentieren.Kommentar> getKommentar() {
+                if (kommentar == null) {
+                    kommentar = new ArrayList<Rezepte.Rezept.Kommentieren.Kommentar>();
+                }
+                return this.kommentar;
             }
 
-            /**
-             * Legt den Wert der name-Eigenschaft fest.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setName(String value) {
-                this.name = value;
-            }
 
             /**
-             * Ruft den Wert der datum-Eigenschaft ab.
+             * <p>Java-Klasse für anonymous complex type.
              * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+             * 
+             * <pre>
+             * &lt;complexType>
+             *   &lt;complexContent>
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" />
+             *       &lt;attribute name="Datum" type="{http://www.w3.org/2001/XMLSchema}date" />
+             *       &lt;attribute name="Zeit" type="{http://www.w3.org/2001/XMLSchema}time" />
+             *       &lt;attribute name="Kommentare" type="{http://www.w3.org/2001/XMLSchema}string" />
+             *     &lt;/restriction>
+             *   &lt;/complexContent>
+             * &lt;/complexType>
+             * </pre>
+             * 
+             * 
              */
-            public XMLGregorianCalendar getDatum() {
-                return datum;
-            }
+            @XmlAccessorType(XmlAccessType.FIELD)
+            @XmlType(name = "")
+            public static class Kommentar {
 
-            /**
-             * Legt den Wert der datum-Eigenschaft fest.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
-            public void setDatum(XMLGregorianCalendar value) {
-                this.datum = value;
-            }
+                @XmlAttribute(name = "Name")
+                protected String name;
+                @XmlAttribute(name = "Datum")
+                @XmlSchemaType(name = "date")
+                protected XMLGregorianCalendar datum;
+                @XmlAttribute(name = "Zeit")
+                @XmlSchemaType(name = "time")
+                protected XMLGregorianCalendar zeit;
+                @XmlAttribute(name = "Kommentare")
+                protected String kommentare;
 
-            /**
-             * Ruft den Wert der zeit-Eigenschaft ab.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
-            public XMLGregorianCalendar getZeit() {
-                return zeit;
-            }
+                /**
+                 * Ruft den Wert der name-Eigenschaft ab.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
+                 */
+                public String getName() {
+                    return name;
+                }
 
-            /**
-             * Legt den Wert der zeit-Eigenschaft fest.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
-            public void setZeit(XMLGregorianCalendar value) {
-                this.zeit = value;
-            }
+                /**
+                 * Legt den Wert der name-Eigenschaft fest.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *     
+                 */
+                public void setName(String value) {
+                    this.name = value;
+                }
 
-            /**
-             * Ruft den Wert der kommentare-Eigenschaft ab.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getKommentare() {
-                return kommentare;
-            }
+                /**
+                 * Ruft den Wert der datum-Eigenschaft ab.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link XMLGregorianCalendar }
+                 *     
+                 */
+                public XMLGregorianCalendar getDatum() {
+                    return datum;
+                }
 
-            /**
-             * Legt den Wert der kommentare-Eigenschaft fest.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setKommentare(String value) {
-                this.kommentare = value;
+                /**
+                 * Legt den Wert der datum-Eigenschaft fest.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link XMLGregorianCalendar }
+                 *     
+                 */
+                public void setDatum(XMLGregorianCalendar value) {
+                    this.datum = value;
+                }
+
+                /**
+                 * Ruft den Wert der zeit-Eigenschaft ab.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link XMLGregorianCalendar }
+                 *     
+                 */
+                public XMLGregorianCalendar getZeit() {
+                    return zeit;
+                }
+
+                /**
+                 * Legt den Wert der zeit-Eigenschaft fest.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link XMLGregorianCalendar }
+                 *     
+                 */
+                public void setZeit(XMLGregorianCalendar value) {
+                    this.zeit = value;
+                }
+
+                /**
+                 * Ruft den Wert der kommentare-Eigenschaft ab.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
+                 */
+                public String getKommentare() {
+                    return kommentare;
+                }
+
+                /**
+                 * Legt den Wert der kommentare-Eigenschaft fest.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *     
+                 */
+                public void setKommentare(String value) {
+                    this.kommentare = value;
+                }
+
             }
 
         }

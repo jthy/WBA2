@@ -1,7 +1,6 @@
 package generated;
 
-
-import generated.Rezepte.Rezept;
+import generated.Rezepte.Rezept.Kommentieren;
 
 
 import java.io.File;
@@ -19,6 +18,7 @@ import javax.xml.bind.Unmarshaller;
 public class Aufgabe4b {
 
 	static Scanner scanner = new Scanner (System.in); 
+	private static Scanner input;
 	  
 	public static void main(String[] args) throws JAXBException, IOException {
 
@@ -84,11 +84,14 @@ public class Aufgabe4b {
     		  System.out.println("Brennwert pP" + r.getRezept().get(i).getZubereitung().getBrennwertPP());
     		  System.out.println("\n\nZubereitung\nArbeitszeit" + r.getRezept().get(i).getZubereitung().getVorgänge());
     		  
-    		  System.out.println("Kommentare\nName" + r.getRezept().get(i).getKommentieren().getName());
-    		  System.out.println("Zeit:" + r.getRezept().get(i).getKommentieren().getZeit());
-    		  System.out.println("Datum" + r.getRezept().get(i).getKommentieren().getDatum());
-    		  System.out.println("Kommentar" + r.getRezept().get(i).getKommentieren().getKommentare());
     		  
+              for (int k = 0; k <= r.getRezept().get(i).getKommentieren().getKommentar().size() - 1; k++) {
+                  System.out.println("Autor: " + r.getRezept().get(i).getKommentieren().getKommentar().get(k).getName());
+                  System.out.println("Datum: " + r.getRezept().get(i).getKommentieren().getKommentar().get(k).getDatum());
+                  System.out.println("Uhrzeit: " + r.getRezept().get(i).getKommentieren().getKommentar().get(k).getZeit());
+                  System.out.println("Kommentar: " + r.getRezept().get(i).getKommentieren().getKommentar().get(k).getKommentare());
+                  System.out.println();
+              }
     	  }
       }
     	  
@@ -99,9 +102,7 @@ public class Aufgabe4b {
       public static void eingeben(Rezepte r, File file, Marshaller m) throws IOException, JAXBException {
 
 		Writer w = new FileWriter(file);
-		String name;
-		String kommentar;
-		
+
 		//Abfrage nach Rezept
 		System.out.println("Welches Rezept?");
 		int x = scanner.nextInt();
@@ -109,19 +110,17 @@ public class Aufgabe4b {
             System.out.println("Rezept nicht vorhanden.");
         }
 		
-		Rezept.Kommentieren neuerKommentar = new Rezept.Kommentieren();
+		Kommentieren.Kommentar neuerKommentar = new Kommentieren.Kommentar();
 		
 		System.out.println("\nName: ");
-		name = scanner.nextLine();
-		neuerKommentar.setName(name);
+		neuerKommentar.setName(getString());
 		
 		//automatische Systemzeit ermitteln
 		Timestamp zeit = new Timestamp(System.currentTimeMillis());
-        System.out.println("Datum: " + zeit);
+        System.out.print("Datum: " + zeit);
 		
-		System.out.println("\nIhr Kommentar:");
-		kommentar = scanner.nextLine();
-		neuerKommentar.setKommentare(kommentar);
+		System.out.println("\nDein Kommentar:");
+		neuerKommentar.setKommentare(getString());
         
         System.out.print("Danke für Deinen Kommentar!");
         
@@ -129,7 +128,13 @@ public class Aufgabe4b {
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         
         //Kommentar hinzufügen
-       // r.getRezept().get(0).getKommentieren().getKommentare().add(x, neuerKommentar);
+        r.getRezept().get(0).getKommentieren().getKommentar().add(x,neuerKommentar);
 		m.marshal(r,w);
+     }
+		
+		// Bugfixing (Scanner wartet ohne eigene Methode nicht auf Eingabe vom Nutzer!)
+	    public static String getString() {
+	        input = new Scanner(System.in);
+	        return input.nextLine();
   }
 }

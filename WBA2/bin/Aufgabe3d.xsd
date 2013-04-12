@@ -77,19 +77,20 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
-			
-	<xs:element name="Kommentieren" maxOccurs="1" minOccurs="0">	
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="Name" type="xs:string"/>
-				<xs:element name="Datum" type="xs:date"/>
-				<xs:element name="Zeit" type="xs:time"/>
-				<xs:element name="Kommentare" type="xs:string"/>
-			</xs:sequence>
-		</xs:complexType>			
+	<xs:element name="Kommentieren" maxOccurs="1" minOccurs="0">
+	<xs:complexType>	
+		<xs:sequence>
+	            <xs:element name="Kommentar" maxOccurs="unbounded" minOccurs="0">
+	                <xs:complexType>
+	                    <xs:attribute name="Name" type="xs:string"/>
+	                    <xs:attribute name="Datum" type="xs:date"/>
+	                    <xs:attribute name="Zeit" type="xs:time"/>
+	                    <xs:attribute name="Kommentare" type="xs:string"/>
+	                </xs:complexType>
+	            </xs:element>
+	        </xs:sequence>
+	    </xs:complexType>
 	</xs:element>
-	
 </xs:sequence>
 </xs:complexType>
 </xs:element>
