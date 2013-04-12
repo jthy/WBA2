@@ -1,6 +1,8 @@
 package generated;
 
+
 import generated.Rezept;
+
 
 import java.io.File;
 import java.io.FileWriter;
@@ -14,33 +16,28 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-
 public class Aufgabe4_b {
 
-	  static Scanner scanner = new Scanner (System.in); 
+	static Scanner scanner = new Scanner (System.in); 
 	  
-  public static void main(String[] args) throws JAXBException, IOException {
+	public static void main(String[] args) throws JAXBException, IOException {
 
+		 Boolean anzeige = true;
+		 int eingabe = 0;
 	  
-	  //xml_File in Datei speichern
-	     File file = new File("src/Aufgabe3dSchokoladenkuchen.xml");
-	 
+	    //xml_File in Datei speichern
+	    File file = new File("src/Aufgabe3dSchokoladenkuchen.xml");
 	    //jaxb Objekt erstellen
 	    JAXBContext context = JAXBContext.newInstance(Rezept.class);
-	    
 	    //Marshaller
 	    Marshaller m = context.createMarshaller();
-	    
 	    //Unmarshaller
 	    Unmarshaller um = context.createUnmarshaller();
-	    
 	    //Datei einlesen
 	    Rezept r = (Rezept) um.unmarshal(file);
+	 
 	    
-	 // Menue
-	   Boolean anzeige = true;
-	   int eingabe = 0;
-	    
+	   //Menue
       while (anzeige) {
           System.out.println();
           System.out.println("1. Ausgabe XML Datei");
@@ -69,7 +66,6 @@ public class Aufgabe4_b {
    }    
 
     //Ausgabe der XML-Datei in Java
-      
       public static void ausgabe(Rezept r) {
     	  
     	System.out.println("Rezept: ");
@@ -92,7 +88,7 @@ public class Aufgabe4_b {
    // Neuen Kommentar einfuegen
       public static void eingeben(Rezept r, File file, Marshaller m) throws IOException, JAXBException {
 
-		//Kommentar einfügen
+		//Kommentar eingeben
 		Writer w = new FileWriter(file);
 		String name;
 		String kommentar;
@@ -117,7 +113,7 @@ public class Aufgabe4_b {
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         
         //Kommentar hinzufügen
-       // r.getKommentieren().add(rezept1, neuerKommentar);
+        //r.getKommentieren().add(r, neuerKommentar);
 		m.marshal(r,w);
   }
 }
