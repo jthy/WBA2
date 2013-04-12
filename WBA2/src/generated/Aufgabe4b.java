@@ -1,128 +1,135 @@
 package generated;
 
-import generated.Rezept.*;
-/*import generated.ObjectFactory;
-import generated.Chefkoch.*;
 
-import java.util.GregorianCalendar;
-import javax.xml.datatype.DatatypeConfigurationException;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;*/
+import generated.Rezepte.Rezept;
+
 
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.io.Writer;
+import java.sql.Timestamp;
+import java.util.Scanner;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-
 public class Aufgabe4b {
 
-  private static final String REZEPT_XML = "./Aufgabe3d.xml";
+	static Scanner scanner = new Scanner (System.in); 
+	  
+	public static void main(String[] args) throws JAXBException, IOException {
 
-  public static void main(String[] args) throws JAXBException, IOException {
+		 Boolean anzeige = true;
+		 int eingabe = 0;
+	  
+	    //xml_File in Datei speichern
+	    File file = new File("src/Aufgabe3dSchokoladenkuchen.xml");
+	    
+	    //jaxb Objekt erstellen
+	    JAXBContext context = JAXBContext.newInstance(Rezepte.class);
+	    //Marshaller
+	    Marshaller m = context.createMarshaller();
+	    //Unmarshaller
+	    Unmarshaller um = context.createUnmarshaller();
+	    Rezepte r = (Rezepte) um.unmarshal(file);
+	 
+	    
+	   //Menue
+      while (anzeige) {
+          System.out.println();
+          System.out.println("1. Ausgabe XML Datei");
+          System.out.println("2. Neuen Kommentar verfassen");
+          System.out.println("3. Beenden");
+          System.out.println();
+          eingabe = scanner.nextInt();
 
-    ArrayList<Rezept> RezeptList = new ArrayList<Rezept>();
+          // Ausgabe XML Datei
+          if (eingabe == 1) {
+              ausgabe(r);
+          }
 
-   //Allgemeines einlesen
-    Allgemeines Allgemeines1 = new Allgemeines();
-    Allgemeines1.setRezeptname("Lenchen's Schokoladenkuchen");
-    Allgemeines1.setAutor("schnuebi");
-    
-    //Zutaten einlesen
-    Zutaten Zutat1 = new Zutaten();
-    Zutat1.setZutat("Butter");
-    Zutat1.setGewicht(200);
-    Zutat1.setEinheit("g");
-    
-    Zutaten Zutat2 = new Zutaten();
-    Zutat2.setZutat("Zucker");
-    Zutat2.setGewicht(200);
-    Zutat2.setEinheit("g");
-    
-    Zutaten Zutat3 = new Zutaten();
-    Zutat3.setZutat("Schokolade, Blockschokolade");
-    Zutat3.setGewicht(200);
-    Zutat3.setEinheit("g");
-    
-    Zutaten Zutat4 = new Zutaten();
-    Zutat4.setZutat("Mehl");
-    Zutat4.setGewicht(120);
-    Zutat4.setEinheit("g");
-    
-    Zutaten Zutat5 = new Zutaten();
-    Zutat5.setZutat("Backpulver");
-    Zutat5.setGewicht(0.5);
-    Zutat5.setEinheit("TL");
-    
-    Zutaten Zutat6 = new Zutaten();
-    Zutat6.setZutat("Vanillezucker");
-    Zutat6.setGewicht(1);
-    Zutat6.setEinheit("Pkt");
-    
-    Zutaten Zutat7 = new Zutaten();
-    Zutat7.setZutat("Ei(er)");
-    Zutat7.setGewicht(4);
-    Zutat7.setEinheit("");
-    
-    //Zubereitungsangaben einlesen
-    Zubereitung Zubereitung1= new Zubereitung();
-    //Zubereitung1.setArbeitszeit(01:00:00);
-    Zubereitung1.setSchwierigkeitsgrad("normal");
-    Zubereitung1.setBrennwertPP(295);
-    Zubereitung1.setVorgänge("Butter und Schokolade im Wasserbad schmelzen. Eier trennen. Eiweiß steif schlagen. Eigelbe, Zucker und Vanillezucker verrühren. Geschmolzene Butter-Schokomasse hinzufügen und mischen. Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiße vorsichtig unterheben. In eine gut gefettete Form geben. Bei 180°Grad 40 – 50 Minuten backen.");
-    
-    //Kommentare einlesen
-    Kommentieren Kommentieren1= new Kommentieren();
-    Kommentieren1.setName("swieselchen");
-    //Kommentieren1.setDatum(value)
-    //Kommentieren1.setZeit(18:49:00);
-    Kommentieren1.setKommentare("Habe Deinen Kuchen gestern gebacken (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvertüre, zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert. Ich übrigends auch, super Rezept.");
-    Kommentieren1.setKommentarHilfreich("ja");
-    
-   
-    //Rezept erstellen
-    Rezept Rezept1 = new Rezept();
-    Rezept1.setAllgemeines(Allgemeines1);
-    Rezept1.setZutaten(Zutat1);
-    Rezept1.setZutaten(Zutat2);
-    Rezept1.setZutaten(Zutat3);
-    Rezept1.setZutaten(Zutat4);
-    Rezept1.setZutaten(Zutat5);
-    Rezept1.setZutaten(Zutat6);
-    Rezept1.setZutaten(Zutat7);
-    Rezept1.setPortionen(16);
-    Rezept1.setZubereitung(Zubereitung1);
-    Rezept1.setKommentieren(Kommentieren1);
-    
-    //Rezept in Liste aller Rezepte hinzufügen
-    RezeptList.add(Rezept1);
-    
+          // Neuen Kommentar verfassen
+          if (eingabe == 2) {
+              eingeben(r, file, m);
+          }
 
-    //JAXB-Kontent erstellen und Marshaller initialisieren
-    JAXBContext context = JAXBContext.newInstance(Rezept.class);
-    Marshaller m = context.createMarshaller();
-    m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+          // Menue beenden
+          if (eingabe == 3) {
+              anzeige = false;
+          }
+          else
+        	  System.out.println("Ungültige Eingabe");
+      }
+   }    
 
-    // Write to System.out
-    m.marshal(Rezept1, System.out);
+    //Ausgabe der XML-Datei in Java
+      public static void ausgabe(Rezepte r) {
+    	  for (int i = 0; i<=r.getRezept().size() -1; i++){
+    		  System.out.println("Rezept: ");
+    		  System.out.println("Rezeptname" + r.getRezept().get(i).getRezeptname());
+    		  System.out.println("Autor" + r.getRezept().get(i).getAutor());
+    		  
+    		  for (int j=0;j<=r.getRezept().get(i).getZutaten().getZutat().size() -1; j++){
+    			  System.out.println("" + r.getRezept().get(i).getZutaten().getZutat().get(j).getMenge());
+    			  System.out.println("" + r.getRezept().get(i).getZutaten().getZutat().get(j).getEinheit());
+    			  System.out.println("" + r.getRezept().get(i).getZutaten().getZutat().get(j).getName());
+    		  }
+    		  System.out.println("Portionen:" + r.getRezept().get(i).getPortionen());
+    		  
+    		  System.out.println("Zubereitung\nArbeitszeit" + r.getRezept().get(i).getZubereitung().getArbeitszeit());
+    		  System.out.println("Schwierigkeitsgrad" + r.getRezept().get(i).getZubereitung().getSchwierigkeitsgrad());
+    		  System.out.println("Brennwert pP" + r.getRezept().get(i).getZubereitung().getBrennwertPP());
+    		  System.out.println("\n\nZubereitung\nArbeitszeit" + r.getRezept().get(i).getZubereitung().getVorgänge());
+    		  
+    		  System.out.println("Kommentare\nName" + r.getRezept().get(i).getKommentieren().getName());
+    		  System.out.println("Zeit:" + r.getRezept().get(i).getKommentieren().getZeit());
+    		  System.out.println("Datum" + r.getRezept().get(i).getKommentieren().getDatum());
+    		  System.out.println("Kommentar" + r.getRezept().get(i).getKommentieren().getKommentare());
+    		  
+    	  }
+      }
+    	  
+    	
+		
+      
+   // Neuen Kommentar einfuegen
+      public static void eingeben(Rezepte r, File file, Marshaller m) throws IOException, JAXBException {
 
-    // Write to File
-    m.marshal(Rezept1, new File(REZEPT_XML));
-
-    // get variables from our xml file, created before
-    System.out.println();
-    System.out.println("Ausgabe der XML-Datei: ");
-    Unmarshaller um= context.createUnmarshaller();
-    Chefkoch Rezept2= (Chefkoch) um.unmarshal(new FileReader(REZEPT_XML));
-    ArrayList<Rezept> list = Rezept2.getRezept();
-    for (Rezept rezept : list) {
-      System.out.println("Rezept: ");
-      System.out.println("Rezept: " + rezept.getAllgemeines());
-    }
+		Writer w = new FileWriter(file);
+		String name;
+		String kommentar;
+		
+		//Abfrage nach Rezept
+		System.out.println("Welches Rezept?");
+		int x = scanner.nextInt();
+		if (x > r.getRezept().size()) {
+            System.out.println("Rezept nicht vorhanden.");
+        }
+		
+		Rezept.Kommentieren neuerKommentar = new Rezept.Kommentieren();
+		
+		System.out.println("\nName: ");
+		name = scanner.nextLine();
+		neuerKommentar.setName(name);
+		
+		//automatische Systemzeit ermitteln
+		Timestamp zeit = new Timestamp(System.currentTimeMillis());
+        System.out.println("Datum: " + zeit);
+		
+		System.out.println("\nIhr Kommentar:");
+		kommentar = scanner.nextLine();
+		neuerKommentar.setKommentare(kommentar);
+        
+        System.out.print("Danke für Deinen Kommentar!");
+        
+        // Formatierung der XML-Datei
+        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+        
+        //Kommentar hinzufügen
+       // r.getRezept().get(0).getKommentieren().getKommentare().add(x, neuerKommentar);
+		m.marshal(r,w);
   }
-} 
+}

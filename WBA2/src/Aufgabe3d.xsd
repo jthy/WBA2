@@ -1,30 +1,47 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:element name="Chefkoch">
+<xs:element name="Rezepte">
 <xs:complexType>
 <xs:sequence>
-<xs:element name="Rezept">
+<xs:element name="Rezept" maxOccurs="unbounded" minOccurs="1">
 <xs:complexType>
 <xs:sequence>
-	<xs:element name="Allgemeines">
+	<xs:element name="Rezeptname" type="xs:string"/>
+	<xs:element name="Autor" type="xs:string"/>
+	
+	<xs:element name="Zutaten" maxOccurs="1" minOccurs="1">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Rezeptname" type="xs:string"/>
-				<xs:element name="Autor" type="xs:string"/>
-			</xs:sequence>
-		</xs:complexType>	
+				<xs:element name="Zutat" maxOccurs="unbounded" minOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+	                       <xs:element name="Name" type="xs:string" maxOccurs="1"
+	                                   minOccurs="1"/>
+	                       <xs:element name="Menge" type="xs:float" maxOccurs="1"
+	                                   minOccurs="0"/>
+	                   </xs:sequence>
+	                   <xs:attribute name="Einheit" default="g">
+	                       <xs:simpleType>
+	                            <xs:restriction base="xs:string">
+	                                <xs:enumeration value="g"/>
+	                                <xs:enumeration value="Pck."/>
+	                                <xs:enumeration value="EL"/>
+	                                <xs:enumeration value="ml"/>
+	                                <xs:enumeration value="Prise"/>
+	                                <xs:enumeration value="Dose"/>
+	                                <xs:enumeration value="TL"/>
+	                                <xs:enumeration value="Pkt."/>
+	                                <xs:enumeration value="Stk." />
+	                                <xs:enumeration value="Flasche"/>
+	                            </xs:restriction>
+	                        </xs:simpleType>
+	                    </xs:attribute>
+	                </xs:complexType>
+	            </xs:element>
+	        </xs:sequence>
+	    </xs:complexType>
 	</xs:element>
-	
-	<xs:element name="Zutaten">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="Zutat" type="xs:string"/>
-				<xs:element name="Gewicht" type="xs:integer"/>
-				<xs:element name="Einheit" type="xs:string"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	
+
 
 	<xs:element name="Portionen">
 		<xs:simpleType>
@@ -39,7 +56,21 @@
 	<xs:element name="Zubereitung">
 		<xs:complexType>
 			<xs:sequence>	
-				<xs:element name="Arbeitszeit" type="xs:time"/>
+				<xs:element name="Arbeitszeit">
+					<xs:complexType>
+                          <xs:sequence>
+                               <xs:element name="Dauer" type="xs:integer"/>
+                         </xs:sequence>
+                         <xs:attribute name="Einheit">
+                             <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                        <xs:enumeration value="std"/>
+										<xs:enumeration value="min"/>
+								</xs:restriction>
+							</xs:simpleType>                         
+						</xs:attribute>
+					</xs:complexType>
+                </xs:element>
 				<xs:element name="Schwierigkeitsgrad" type="xs:string"/>
 				<xs:element name="Brennwert-p.P" type="xs:integer"/>
 				<xs:element name="Vorgänge" type="xs:string"/>	
@@ -48,7 +79,7 @@
 	</xs:element>
 	
 			
-	<xs:element name="Kommentieren">	
+	<xs:element name="Kommentieren" maxOccurs="1" minOccurs="0">	
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="Name" type="xs:string"/>
@@ -56,13 +87,6 @@
 				<xs:element name="Zeit" type="xs:time"/>
 				<xs:element name="Kommentare" type="xs:string"/>
 			</xs:sequence>
-			<xs:attribute name="Kommentar_hilfreich">
-  					<xs:simpleType>
-   						<xs:restriction base="xs:string">
-   							<xs:pattern value="ja|nein"/>
- 						</xs:restriction>
-					</xs:simpleType>
-			</xs:attribute>
 		</xs:complexType>			
 	</xs:element>
 	

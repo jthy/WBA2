@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Rezept>
+<?xml version="1.0" encoding="UTF-8"?>
+<Chefkoch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Aufgabe3d.xsd">
+  <Rezept>
     <Allgemeines>
         <Rezeptname>Lenchen's Schokoladenkuchen</Rezeptname>
         <Autor>schnuebi</Autor>
@@ -14,22 +15,82 @@
         <Arbeitszeit>01:00:00</Arbeitszeit>
         <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
         <Brennwert-p.P>295</Brennwert-p.P>
-        <VorgŠnge>
+        <Vorgï¿½nge>
     Butter und Schokolade im Wasserbad schmelzen. 
-    Eier trennen. Eiwei§ steif schlagen. 
-    Eigelbe, Zucker und Vanillezucker verrŸhren. 
-    Geschmolzene Butter-Schokomasse hinzufŸgen und mischen. 
-    Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiwei§e vorsichtig unterheben. 
+    Eier trennen. Eiweiï¿½ steif schlagen. 
+    Eigelbe, Zucker und Vanillezucker verrï¿½hren. 
+    Geschmolzene Butter-Schokomasse hinzufï¿½gen und mischen. 
+    Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiï¿½e vorsichtig unterheben. 
     In eine gut gefettete Form geben. 
-	Bei 180¡Grad 40 Ğ 50 Minuten backen.</VorgŠnge>
+	Bei 180ï¿½Grad 40 ï¿½ 50 Minuten backen.</Vorgï¿½nge>
     </Zubereitung>
     <Kommentieren Kommentar_hilfreich="ja">
         <Name>swieselchen</Name>
         <Datum>2002-02-07</Datum>
         <Zeit>18:49:00</Zeit>
         <Kommentare>Habe Deinen Kuchen gestern gebacken 
-    (kleine Abwandlung: statt Blockschokolade hatte ich nur KuvertŸre, 
+    (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvertï¿½re, 
     zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert. 
-    Ich Ÿbrigends auch, super Rezept.</Kommentare>
+    Ich ï¿½brigends auch, super Rezept.</Kommentare>
     </Kommentieren>
 </Rezept>
+<Rezept>
+  <Allgemeines>
+    <Rezeptname>Pilav</Rezeptname>
+    <Autor>Vlar</Autor>
+  </Allgemeines>
+    <Zutaten>
+    <Zutat>Reis</Zutat>
+    <Gewicht>4</Gewicht>
+    <Einheit>GlÃ¤ser</Einheit>
+    
+    <Zutat>Nudeln (Vermicelles, Pasta da minestra)</Zutat>
+    <Gewicht>1</Gewicht>
+    <Einheit>Glas</Einheit>
+    
+     <Zutat>Wasser</Zutat>
+    <Gewicht>8</Gewicht>
+    <Einheit>GlÃ¤ser</Einheit>
+    
+     <Zutat>PlanzenÃ¶l</Zutat>
+    <Gewicht></Gewicht>
+    <Einheit></Einheit>
+    
+     <Zutat>Salz</Zutat>
+    <Gewicht></Gewicht>
+    <Einheit></Einheit>
+   
+  </Zutaten>
+  <Portionen>0</Portionen>
+  <Zubereitung>
+    <Arbeitszeit>00:10:00</Arbeitszeit>
+    <Schwierigkeitsgrad>normal</Schwierigkeitsgrad>
+    <Brennwert-p.P></Brennwert-p.P>
+    <VorgÃ¤nge>
+    Reis in einem feinen Sieb waschen und abtropfen lassen. 
+    In die Pfanne reichlich PflanzenÃ¶l geben, so dass ein Spiegel aus Ã–l entsteht. 
+    Die Nudeln zufÃ¼gen, goldgelb anbraten, den Reis zufÃ¼gen und umrÃ¼hren. 
+    Mit kaltem Wasser abschrecken und Salz hinzufÃ¼gen. 
+    Bis zum Siedepunkt kÃ¶cheln lassen, Herd ausmachen, 
+    Deckel darauf legen und ausquellen lassen. 
+	Tipp: Man kann in das Wasser noch Curry, HÃ¼hnerbrÃ¼he oder 
+	RinderbrÃ¼he geben, je nachdem wozu man den Reis servieren will.
+	</VorgÃ¤nge>
+  </Zubereitung>
+  <Kommentieren Kommentar_hilfreich="ja">
+    <Name>kÃ¼chenmungo</Name>
+    <Datum>2010-06-23</Datum>
+    <Zeit>14:46:00</Zeit>
+    <Kommentare>Hallo ince, 
+	Dein Reisrezept hÃ¶rt sich gut an. Nimmst Du Langkorn- oder Rundkornreis? 
+	Sind die Nudel nach dem garen noch zu erkennen? 
+	Liebe GrÃ¼ÃŸe Renate
+	</Kommentare>
+	<Name>Astrid</Name>
+    <Datum>2009-09-11</Datum>
+    <Zeit>10:02:12</Zeit>
+    <Kommentare>Super lecker!</Kommentare>
+  </Kommentieren>
+</Rezept>
+</Chefkoch>
+

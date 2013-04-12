@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.6 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // €nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2013.04.09 um 12:00:32 PM CEST 
+// Generiert: 2013.04.12 um 01:20:26 PM CEST 
 //
 
 
@@ -37,51 +37,59 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Chefkoch }
+     * Create an instance of {@link Rezepte }
      * 
      */
-    public Chefkoch createChefkoch() {
-        return new Chefkoch();
+    public Rezepte createRezepte() {
+        return new Rezepte();
     }
 
     /**
-     * Create an instance of {@link Chefkoch.Rezept }
+     * Create an instance of {@link Rezepte.Rezept }
      * 
      */
-    public Chefkoch.Rezept createChefkochRezept() {
-        return new Chefkoch.Rezept();
+    public Rezepte.Rezept createRezepteRezept() {
+        return new Rezepte.Rezept();
     }
 
     /**
-     * Create an instance of {@link Chefkoch.Rezept.Allgemeines }
+     * Create an instance of {@link Rezepte.Rezept.Zubereitung }
      * 
      */
-    public Chefkoch.Rezept.Allgemeines createChefkochRezeptAllgemeines() {
-        return new Chefkoch.Rezept.Allgemeines();
+    public Rezepte.Rezept.Zubereitung createRezepteRezeptZubereitung() {
+        return new Rezepte.Rezept.Zubereitung();
     }
 
     /**
-     * Create an instance of {@link Chefkoch.Rezept.Zutaten }
+     * Create an instance of {@link Rezepte.Rezept.Zutaten }
      * 
      */
-    public Chefkoch.Rezept.Zutaten createChefkochRezeptZutaten() {
-        return new Chefkoch.Rezept.Zutaten();
+    public Rezepte.Rezept.Zutaten createRezepteRezeptZutaten() {
+        return new Rezepte.Rezept.Zutaten();
     }
 
     /**
-     * Create an instance of {@link Chefkoch.Rezept.Zubereitung }
+     * Create an instance of {@link Rezepte.Rezept.Kommentieren }
      * 
      */
-    public Chefkoch.Rezept.Zubereitung createChefkochRezeptZubereitung() {
-        return new Chefkoch.Rezept.Zubereitung();
+    public Rezepte.Rezept.Kommentieren createRezepteRezeptKommentieren() {
+        return new Rezepte.Rezept.Kommentieren();
     }
 
     /**
-     * Create an instance of {@link Chefkoch.Rezept.Kommentieren }
+     * Create an instance of {@link Rezepte.Rezept.Zubereitung.Arbeitszeit }
      * 
      */
-    public Chefkoch.Rezept.Kommentieren createChefkochRezeptKommentieren() {
-        return new Chefkoch.Rezept.Kommentieren();
+    public Rezepte.Rezept.Zubereitung.Arbeitszeit createRezepteRezeptZubereitungArbeitszeit() {
+        return new Rezepte.Rezept.Zubereitung.Arbeitszeit();
+    }
+
+    /**
+     * Create an instance of {@link Rezepte.Rezept.Zutaten.Zutat }
+     * 
+     */
+    public Rezepte.Rezept.Zutaten.Zutat createRezepteRezeptZutatenZutat() {
+        return new Rezepte.Rezept.Zutaten.Zutat();
     }
 
 }
